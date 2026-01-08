@@ -1,0 +1,175 @@
+/* --- RESET & BASE --- */
+:root {
+    --bg: #000000;
+    --text: #ffffff;
+    --text-dim: #86868b;
+    --accent: #2997ff;
+    --glass: rgba(29, 29, 31, 0.72);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    cursor: none; /* Curseur natif caché */
+}
+
+/* --- CURSEUR (CORRECTIF Z-INDEX) --- */
+.cursor-dot, .cursor-outline {
+    position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
+    border-radius: 50%; 
+    pointer-events: none;
+    /* Z-INDEX AUGMENTÉ pour être au-dessus de la modale (10000) */
+    z-index: 11000; 
+    mix-blend-mode: difference; /* Permet de voir le curseur sur fond blanc */
+}
+.cursor-dot { width: 8px; height: 8px; background: white; }
+.cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: width 0.2s, height 0.2s; }
+
+::-webkit-scrollbar { width: 0px; background: transparent; }
+
+/* --- TYPOGRAPHIE & UTILS --- */
+h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.1; }
+
+.hero-title {
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 800;
+    background: linear-gradient(180deg, #fff 0%, #b0b0b0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0; transform: translateY(50px);
+}
+
+.section-header { font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 700; margin-bottom: 2rem; }
+.text-reveal { color: var(--text-dim); font-size: clamp(1.5rem, 3vw, 3rem); font-weight: 600; line-height: 1.4; max-width: 900px; margin: 0 auto; }
+.highlight-text span { opacity: 0.2; transition: opacity 0.1s; }
+
+section { position: relative; width: 100%; padding: 10vh 5vw; }
+.full-screen { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+/* --- NAV --- */
+nav {
+    position: fixed; top: 0; left: 0; width: 100%; padding: 20px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 100; mix-blend-mode: difference;
+}
+.logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.05em; }
+.menu-btn { font-size: 0.9rem; font-weight: 500; cursor: pointer; }
+
+/* --- BENTO --- */
+.bento-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; max-width: 1200px; margin: 0 auto;
+}
+.bento-card {
+    background: #1d1d1f; padding: 40px; border-radius: 30px;
+    position: relative; overflow: hidden; transition: transform 0.4s var(--ease-out);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.bento-card:hover { transform: scale(0.98); background: #222; }
+.bento-icon { font-size: 3rem; margin-bottom: 20px; color: var(--accent); }
+.bento-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #fff; }
+.bento-desc { color: var(--text-dim); font-size: 1rem; }
+
+/* --- STACKING CARDS (PROJETS) --- */
+.project-wrap { position: relative; padding-bottom: 20vh; }
+.card-container {
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    position: sticky; top: 0;
+}
+.card {
+    width: 80vw; height: 70vh; background: #161617; border-radius: 40px;
+    overflow: hidden; position: relative; transform-origin: center top;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); display: flex;
+    cursor: pointer; /* Indique le clic */
+    transition: box-shadow 0.3s ease;
+}
+.card:hover { box-shadow: 0 30px 60px -10px rgba(255, 255, 255, 0.1); }
+
+.card-visual {
+    flex: 1.5;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+.card-visual#arcadia {
+    background-image: url("./img/arcadia.webp");
+}
+.card-info {
+    flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center;
+    background: rgba(29, 29, 31, 0.6); backdrop-filter: blur(20px);
+}
+.card-tag { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 20px; }
+
+.btn-fake {
+    margin-top: 30px; display: inline-block; background: #fff; color: #000;
+    padding: 12px 24px; border-radius: 30px; font-weight: 600; font-size: 0.9rem;
+    width: fit-content; pointer-events: none;
+}
+
+/* --- MODALE PROJET --- */
+.project-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: #000; z-index: 10000; /* Le curseur est à 11000 donc au dessus */
+    display: none; opacity: 0; overflow-y: auto;
+}
+
+.modal-header {
+    position: fixed; top: 0; left: 0; width: 100%; padding: 30px;
+    display: flex; justify-content: flex-end; z-index: 10001;
+}
+
+.close-btn {
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2); color: #fff;
+    padding: 10px 20px; border-radius: 30px; cursor: pointer;
+    font-weight: 600; text-transform: uppercase; font-size: 0.8rem;
+    transition: background 0.3s;
+}
+.close-btn:hover { background: rgba(255,255,255,0.3); }
+
+.modal-content {
+    max-width: 1000px; margin: 0 auto; padding: 100px 20px 100px 20px;
+}
+
+.modal-hero-img {
+    width: 100%; height: 50vh; border-radius: 20px;
+    background-size: cover; background-position: center;
+    margin-bottom: 40px;
+}
+
+.modal-title { font-size: clamp(3rem, 5vw, 6rem); font-weight: 800; margin-bottom: 20px; line-height: 1; }
+.modal-tags { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+.tag-chip { padding: 8px 16px; border: 1px solid #333; border-radius: 20px; font-size: 0.9rem; color: var(--text-dim); }
+.modal-body { font-size: 1.2rem; line-height: 1.6; color: #ddd; max-width: 800px; }
+.modal-body p { margin-bottom: 20px; }
+
+/* --- FOOTER --- */
+footer { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.big-cta {
+    font-size: clamp(3rem, 8vw, 8rem); font-weight: 800;
+    background: linear-gradient(90deg, #fff, #888, #fff); background-size: 200%;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+}
+@keyframes shine { 0% { background-position: 0%; } 100% { background-position: 200%; } }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card { flex-direction: column; width: 90vw; height: 80vh; }
+    .card-visual { flex: 1; }
+    .card-info { flex: 1; padding: 30px; }
+}
+
+.loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; justify-content: center; align-items: center; }
+.loader-bar { width: 0%; height: 2px; background: #fff; }
+
+.FrontImage {
+    margin: -75px 0 0 -100px;
+}
