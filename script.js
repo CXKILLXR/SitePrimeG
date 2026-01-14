@@ -76,7 +76,7 @@ const translations = {
         'card-3-desc': "The origins. A performant static site that laid the foundations of my learning.",
         'footer-ready': "Ready for the next level?",
         'footer-click': "(Click to contact me)",
-        'footer-cta': "Discutons."
+        'footer-cta': "Let's Talk."
     }
 };
 
