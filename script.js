@@ -76,7 +76,7 @@ const translations = {
         'card-3-desc': "The origins. A performant static site that laid the foundations of my learning.",
         'footer-ready': "Ready for the next level?",
         'footer-click': "(Click to contact me)",
-        'footer-cta': "Let's Talk."
+        'footer-cta': "Discutons."
     }
 };
 
@@ -215,8 +215,8 @@ const projectData = {
                         <p style="margin-top: 10px;">🔗 <strong>Mes réseaux :</strong> <a href="https://www.linkedin.com/in/corentin-zandomenighi-a773842a2/" target="_blank" style="color:#fff; text-decoration: underline;">LinkedIn</a> / <a href="https://www.therookies.co/u/CXKILLXR" target="_blank" style="color:#fff; text-decoration: underline;">The Rookies</a></p>
                    </div>
                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-                       <a href="./cvfr/CV_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 CV Français</a>
-                       <a href="./cven/CV_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 CV Anglais</a>
+                       <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 CV Français</a>
+                       <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 CV Anglais</a>
                    </div>`
         },
         en: {
@@ -229,8 +229,8 @@ const projectData = {
                         <p style="margin-top: 10px;">🔗 <strong>My Networks:</strong> <a href="https://www.linkedin.com/in/corentin-zandomenighi-a773842a2/" target="_blank" style="color:#fff; text-decoration: underline;">LinkedIn</a> / <a href="https://www.therookies.co/u/CXKILLXR" target="_blank" style="color:#fff; text-decoration: underline;">The Rookies</a></p>
                    </div>
                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-                       <a href="./cvfr/CV_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 Resume French</a>
-                       <a href="./cven/CV_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 Resume English</a>
+                       <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 Resume French</a>
+                       <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 Resume English</a>
                    </div>`
         }
     }
