@@ -124,23 +124,75 @@ const projectData = {
         fr: {
             title: "Arcadia Unbound",
             tags: ["Unreal Engine 5", "RPG", "Game Design", "Équilibrage"],
-            desc: `<p><strong>Projet scolaire en équipe.</strong></p>
-                   <p>En tant que Game Designer, j'ai été responsable de la conception de 3 classes de RPG, incluant la définition de leurs compétences et de leur progression.</p>
-                   <p>J'ai également travaillé sur l'équilibrage des mécaniques de jeu pour assurer une expérience fluide.</p>
-                   <p><a href="https://www.therookies.co/projects/82549" target="_blank" style="color:#fff; text-decoration:underline;">Voir sur The Rookies</a></p>`
+            desc: `<p><strong>Projet étudiant en équipe – Unreal Engine 5.</strong></p>
+               <p><em>Arcadia Unbound</em> a été réalisé lors d’un atelier universitaire ayant pour objectif de créer un <strong>monde ouvert RPG</strong>. Le joueur incarne un <strong>mage</strong> capable de manier plusieurs sorts évolutifs.</p>
+               <p>Projet réalisé avec <strong>Crouzié Ethan</strong>, <strong>Alber Latour Mateo</strong>, <strong>Desplanque David</strong> et <strong>Maurel Thomas</strong>.</p>
+
+               <p>Chaque classe partage une structure d’arbre de compétences commune, avec un niveau maximum de <strong>40</strong>. Grâce à 40 points de compétence, le joueur peut personnaliser son style en améliorant certaines capacités ou en débloquant des formes finales puissantes.</p>
+               
+               <h4>🧩 Structure de l’arbre de compétences</h4>
+               <img src="./img/Arbre competence fr.png" alt="Arbre de compétences Arcadia Unbound" style="width:100%; border-radius:10px; margin:15px 0;">
+               
+               <ul>
+                 <li><strong>Sort offensif</strong> – débloqué dès le départ</li>
+                 <li><strong>Sort offensif avancé</strong> – débloqué au niveau 5</li>
+                 <li><strong>Sort défensif</strong> – débloqué au niveau 10</li>
+                 <li><strong>Sort ultime</strong> – débloqué au niveau 15</li>
+               </ul>
+               <br>
+               <p><strong>Le système de progression utilise un code couleur :</strong></p>
+               <ul>
+                 <li>🔵 Compétences de base</li>
+                 <li>🔴 Améliorations ou variantes</li>
+                 <li>🟡 Passifs – débloquez les 3 pour accéder à la forme Ether</li>
+                 <li>🟢 Forme Ether – version finale et la plus puissante du sort</li>
+               </ul>
+
+               <img src="./img/Mage fr.png" alt="Compétences du mage Arcadia Unbound" style="width:100%; border-radius:10px; margin:20px 0;">
+
+               <p style="margin-top: 20px;">
+                 <a href="https://www.therookies.co/projects/82549" target="_blank" style="color:#fff; text-decoration:underline;">
+                 Voir le projet complet sur The Rookies</a>
+               </p>`
         },
         en: {
             title: "Arcadia Unbound",
             tags: ["Unreal Engine 5", "RPG", "Game Design", "Balancing"],
-            desc: `<p><strong>Team Student Project.</strong></p>
-                   <p>As a Game Designer, I was responsible for designing 3 RPG classes, including defining their skills and progression trees.</p>
-                   <p>I also worked on balancing game mechanics to ensure a fluid experience.</p>
-                   <p><a href="https://www.therookies.co/projects/82549" target="_blank" style="color:#fff; text-decoration:underline;">View on The Rookies</a></p>`
+            desc: `<p><strong>Team Student Project – Unreal Engine 5.</strong></p>
+               <p><em>Arcadia Unbound</em> was created during a university workshop focused on building an <strong>open-world RPG</strong> experience. The player embodies a <strong>mage</strong> mastering different spells and progressions.</p>
+               <p>I collaborated with <strong>Crouzié Ethan</strong>, <strong>Alber Latour Mateo</strong>, <strong>Desplanque David</strong>, and <strong>Maurel Thomas</strong>.</p>
+
+               <p>Each class follows a shared skill tree structure capped at <strong>level 40</strong>. With 40 skill points, players can customize their playstyle by enhancing specific abilities or unlocking powerful final forms.</p>
+
+               <h4>🧩 Skill Tree Structure</h4>
+               <img src="./img/Arbre competence en.png" alt="Arcadia Unbound Skill Tree" style="width:100%; border-radius:10px; margin:15px 0;">
+
+               <ul>
+                 <li><strong>Offensive skill</strong> – unlocked from the start</li>
+                 <li><strong>Advanced offensive skill</strong> – unlocked at level 5</li>
+                 <li><strong>Defensive skill</strong> – unlocked at level 10</li>
+                 <li><strong>Ultimate skill</strong> – unlocked at level 15</li>
+               </ul>
+               <br>
+               <p><strong>The progression system uses color-coded nodes:</strong></p>
+               <ul>
+                 <li>🔵 Basic skills</li>
+                 <li>🔴 Variant or improvement of base spells</li>
+                 <li>🟡 Passives – unlock all 3 to access the Ether form</li>
+                 <li>🟢 Ether form – final and most powerful version of the spell</li>
+               </ul>
+
+               <img src="./img/Mage en.png" alt="Arcadia Unbound Mage Skills" style="width:100%; border-radius:10px; margin:20px 0;">
+
+               <p style="margin-top: 20px;">
+                 <a href="https://www.therookies.co/projects/82549" target="_blank" style="color:#fff; text-decoration:underline;">
+                 View full project on The Rookies</a>
+               </p>`
         }
     },
 
     'projet 2': {
-        image: "url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop')",
+        image: "url('./img/OOB Main.webp')",
         fr: {
             title: "Out of Bounds",
             tags: ["Unreal Engine 5", "Shooter", "Weapon Design", "Rookie Awards Rank B"],
@@ -408,3 +460,21 @@ window.addEventListener("keydown", (e) => {
         }
     }
 });
+
+// --- Zoom intégré (local) dans la modale ---
+document.addEventListener('click', function (e) {
+    const img = e.target.closest('.project-modal img');
+    if (!img) return;
+
+    // Si déjà zoomée → retour à la taille normale
+    if (img.classList.contains('zoomed')) {
+        img.classList.remove('zoomed');
+        return;
+    }
+
+    // Sinon → on applique le zoom local
+    img.classList.add('zoomed');
+});
+
+
+

@@ -11,28 +11,35 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    overflow-x: clip;
-    -webkit-font-smoothing: antialiased;
-    cursor: none;
-
-    /* --- FOND NOIR AVEC LUEUR PASSANTE (CLEAN) --- */
-    background: linear-gradient(
-            120deg,
-            #000000 30%,
-            #111111 50%,
-            #000000 70%
-    );
+    background-color: #000;
+    background-image:
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 30%),
+            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.01) 0%, transparent 25%),
+            linear-gradient(120deg, #000000 20%, #090909 50%, #000000 80%);
     background-size: 300% 300%;
-    animation: backgroundMove 10s ease infinite;
+    background-blend-mode: screen;
+    animation: backgroundFlow 14s ease-in-out infinite;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
-@keyframes backgroundMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* 🌊 Animation avec plus de contraste mais toujours sombre */
+@keyframes backgroundFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 60% 30%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 40% 70%;
+    }
+    100% {
+        background-position: 0% 50%; /* 👈 même position que le début */
+    }
 }
 
 /* --- CURSEUR --- */
@@ -278,3 +285,49 @@ footer { height: 70vh; display: flex; flex-direction: column; justify-content: c
     transform: scale(1.25); /* Bien plus gros */
     z-index: 2;
 }
+
+/* --- Zoom plein écran propre --- */
+.zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+}
+
+.zoom-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    cursor: zoom-out;
+    transition: transform 0.3s ease;
+}
+/* --- Zoom intégré (local) dans la modale --- */
+.project-modal img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+}
+
+.project-modal img.zoomed {
+    transform: scale(1.8);
+    transform-origin: center center;
+    cursor: zoom-out;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+
