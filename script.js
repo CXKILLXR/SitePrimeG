@@ -597,8 +597,11 @@ function closeProject() {
     });
 }
 
-// ✅ Désactive totalement le curseur personnalisé sur mobile et appareils tactiles
-if (!('ontouchstart' in window)) {
+// ✅ Désactive totalement le curseur personnalisé sur les appareils tactiles
+const isTouchDevice =
+    window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
+
+if (!isTouchDevice) {
     const cursorDot = document.querySelector(".cursor-dot");
     const cursorOutline = document.querySelector(".cursor-outline");
 
@@ -612,13 +615,13 @@ if (!('ontouchstart' in window)) {
         cursorOutline.animate(
             {
                 left: `${posX}px`,
-                top: `${posY}px`
+                top: `${posY}px`,
             },
             { duration: 500, fill: "forwards" }
         );
     });
 
-    // tu peux garder ici tes effets hover ou clic
+    // Ici, garde tes effets hover / clic si tu veux
 }
 
 window.addEventListener("mousemove", (e) => {
