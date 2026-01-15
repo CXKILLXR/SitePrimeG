@@ -597,32 +597,9 @@ function closeProject() {
     });
 }
 
-// ✅ Désactive totalement le curseur personnalisé sur les appareils tactiles
-const isTouchDevice =
-    window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
-
-if (!isTouchDevice) {
-    const cursorDot = document.querySelector(".cursor-dot");
-    const cursorOutline = document.querySelector(".cursor-outline");
-
-    window.addEventListener("mousemove", (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        cursorOutline.animate(
-            {
-                left: `${posX}px`,
-                top: `${posY}px`,
-            },
-            { duration: 500, fill: "forwards" }
-        );
-    });
-
-    // Ici, garde tes effets hover / clic si tu veux
-}
+// --- CURSOR LOGIC ---
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorOutline = document.querySelector(".cursor-outline");
 
 window.addEventListener("mousemove", (e) => {
     const posX = e.clientX;
