@@ -330,4 +330,47 @@ footer { height: 70vh; display: flex; flex-direction: column; justify-content: c
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
+.rookies-link {
+    color: inherit;                /* garde la couleur actuelle */
+    text-decoration: none;         /* pas de soulignement */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.rookies-link:hover {
+    transform: scale(1.25);        /* effet de grossissement */
+    opacity: 0.9;                  /* petit effet de fluidité */
+}
+
+.linkedin-link {
+    color: inherit;                /* garde la couleur blanche ou actuelle */
+    text-decoration: none;         /* supprime le soulignement */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.linkedin-link:hover {
+    transform: scale(1.25);        /* effet de grossissement */
+    opacity: 0.9;                  /* effet doux */
+}
+
+.project-modal img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+}
+
+.project-modal img.zoomed {
+    transform: scale(1.8);
+    transform-origin: center center;
+    cursor: zoom-out;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+
+
 

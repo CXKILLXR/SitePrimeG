@@ -15,7 +15,7 @@ const translations = {
         'close': "Fermer",
         'hero-sub': "Game Designer & QA Tester",
         'scroll-hint': "Défilé pour explorer",
-        'manifesto': "Mon rêve est de rejoindre <span style='color:#fff'>Ubisoft</span> en tant que <span style='color:#fff'>Game Designer</span>. Je suis spécialisé en <span style='color:#fff'>QA</span>, mais je reste très polyvalent. Mon objectif est d'acquérir le plus d'expérience possible. J'ai toujours joué aux jeux vidéo, mais avec le temps, je me suis demandé comment les designers transmettaient leur vision. Après avoir étudié leur travail, j'ai découvert que je voulais moi aussi transmettre ma créativité et ma vision du jeu.",
+        'manifesto': "Mon ambition est de rejoindre <span style='color:#fff'>Ubisoft</span> en tant que <span style='color:#fff'>Game Designer</span>.<br><br>Bien que spécialisé en <span style='color:#fff'>QA (Quality Assurance)</span>, je reste <span style='color:#fff'>polyvalent</span> et ouvert à différents aspects du développement de jeux vidéo.<br>Mon objectif est d’acquérir un maximum d’expérience afin de perfectionner mes compétences et d’élargir ma vision du métier.<br><br>Passionné de jeux vidéo depuis toujours, je me suis rapidement intéressé à la manière dont les <span style='color:#fff'>game designers</span> parviennent à transmettre leur vision et leurs émotions à travers le gameplay.<br>Cette réflexion m’a conduit à vouloir, à mon tour, <span style='color:#fff'>créer des expériences uniques</span> et <span style='color:#fff'>partager ma propre vision du jeu</span>.",
         'section-cv': "Curriculum vitæ.",
 
         'bento-1-title': "Compétences",
@@ -38,7 +38,7 @@ const translations = {
         'card-3-desc': "Les origines. Un site statique performant qui a posé les bases de mon apprentissage.",
         'footer-ready': "Prêt pour le prochain niveau ?",
         'footer-click': "(Cliquer pour me contacter)",
-        'footer-cta': "Discutons."
+        'footer-cta': "Échangeons."
     },
     en: {
         'nav-projects': "Projects",
@@ -53,7 +53,7 @@ const translations = {
         'close': "Close",
         'hero-sub': "Game Designer & QA Tester",
         'scroll-hint': "Scroll to explore",
-        'manifesto': "My dream job is to join <span style='color:#fff'>Ubisoft</span> as a <span style='color:#fff'>Game Designer</span>. I specialize in <span style='color:#fff'>QA</span>, but remain quite versatile. My goal is to gain as much experience as possible. I've always played video games, but over time, I began to wonder how designers convey their vision. After studying their work, I discovered that I too want to share my creativity and vision of gaming.",
+        'manifesto': "My ambition is to join <span style='color:#fff'>Ubisoft</span> as a <span style='color:#fff'>Game Designer</span>. Although I specialize in <span style='color:#fff'>Quality Assurance (QA)</span>, I remain <span style='color:#fff'>versatile</span> and eager to explore different aspects of game development. My goal is to gain as much experience as possible to refine my skills and expand my understanding of the craft. As a lifelong video game enthusiast, I’ve always been fascinated by how <span style='color:#fff'>game designers</span> communicate their vision and emotions through gameplay. Today, I aim to <span style='color:#fff'>create unique experiences</span> and <span style='color:#fff'>share my own creative vision</span> with players.",
         'section-cv': "Curriculum Vitae.",
 
         'bento-1-title': "Skills",
@@ -150,7 +150,7 @@ const projectData = {
 
                <img src="./img/Mage fr.png" alt="Compétences du mage Arcadia Unbound" style="width:100%; border-radius:10px; margin:20px 0;">
 
-               <p style="margin-top: 20px;">
+               <p style="margin-top:25px; text-align:center;">
                  <a href="https://www.therookies.co/projects/82549" target="_blank" style="color:#fff; text-decoration:underline;">
                  Voir le projet complet sur The Rookies</a>
                </p>`
@@ -184,56 +184,200 @@ const projectData = {
 
                <img src="./img/Mage en.png" alt="Arcadia Unbound Mage Skills" style="width:100%; border-radius:10px; margin:20px 0;">
 
-               <p style="margin-top: 20px;">
+               <p style="margin-top:25px; text-align:center;">
                  <a href="https://www.therookies.co/projects/82549" target="_blank" style="color:#fff; text-decoration:underline;">
                  View full project on The Rookies</a>
                </p>`
         }
     },
 
-    'projet 2': {
-        image: "url('./img/OOB Main.webp')",
+    'outofbound': {
+        image: "url('./img/OOB logo.png')",
         fr: {
-            title: "Out of Bounds",
-            tags: ["Unreal Engine 5", "Shooter", "Weapon Design", "Rookie Awards Rank B"],
-            desc: `<p><strong>Projet certifié Rookie Awards 2025 (Rank B).</strong></p>
-                   <p>Sur ce projet Unreal Engine 5, j'ai conçu et équilibré l'intégralité du système d'armes (concept, statistiques, sensations de gameplay).</p>
-                   <p>Mon rôle impliquait une collaboration étroite avec l'équipe pour maintenir la cohérence globale.</p>
-                   <p><a href="https://www.therookies.co/projects/83829" target="_blank" style="color:#fff; text-decoration:underline;">Voir sur The Rookies</a></p>`
+            title: "Out of Bound",
+            tags: ["Projet d'études", "Game Design", "Armes", "Équilibrage", "Unreal Engine 5"],
+            desc: `
+      <p><strong>Voici un exemple de mon travail sur Out of Bounds</strong>, j'ai travaillé sur toutes les armes, mais ici, je vous montre que le pistolet. Si vous voulez en voir plus, je vous invite à aller en bas de cette page pour accéder à ma page The Rookies.</p>
+
+      <h3>🛠️ Conception d’armes</h3>
+      <br>
+      <p>Lors de la conception des armes, nous n'avions qu'un seul tir, mais après plusieurs tests, nous avons décidé de créer un deuxième tir afin d'ajouter de la variété et une plus grande profondeur de jeu et de contrôle.</p>
+
+      <h3>🔫 Pistolet</h3>
+      <br>
+      <p>Lors de la conception de cette arme, nous n'avions prévu qu'une seule munition. Après plusieurs tests, nous avons décidé d'en ajouter une seconde afin de diversifier les options et d'offrir une plus grande profondeur de jeu et un meilleur contrôle.</p>
+      <p>Pour cette seconde munition, nous nous sommes inspirés du pistolet à silex de Fortnite. Le pistolet est l'arme principale de tous les joueurs. Ainsi, lorsque vous mourez, vous réapparaissez avec le pistolet, et lorsque les munitions d'une autre arme sont épuisées, vous récupérez automatiquement le pistolet.</p>
+
+      <img src="./gif/Shot pistol.gif" alt="Tir du pistolet" style="width:100%; border-radius:10px; margin:20px 0;">
+
+      <h3>⚖️ Équilibrage</h3>
+      <br>
+      <p>Au cours de nombreux tests et essais pour équilibrer les armes, nous avons trouvé un équilibre qui a satisfait toute l'équipe, et après avoir vu un test avec les dernières modifications, la plupart des retours ont été positifs.</p>
+
+      <h3>🔫 Pistolet</h3>
+      <br>
+      <p>L'équilibrage du pistolet a représenté un véritable défi : il fallait veiller à ce qu'il ne soit ni trop puissant ni totalement inefficace, étant donné qu'il s'agit de l'arme de base des joueurs. Au début des tests, l'arme manquait cruellement de puissance, la rendant pratiquement inutilisable. Cependant, grâce à de nombreux tests et essais en situation de jeu, nous avons pu trouver un bon compromis entre efficacité et inutilité, permettant ainsi aux joueurs de combattre uniquement avec le pistolet.</p>
+
+      <img src="./gif/Balance pistol.gif" alt="Équilibrage du pistolet" style="width:100%; border-radius:10px; margin:20px 0;">
+
+      <p style="margin-top:25px; text-align:center;">
+        <a href="https://www.therookies.co/projects/83829" target="_blank" 
+          style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
+          Voir le projet complet sur The Rookies
+        </a>
+      </p>
+
+    `
         },
         en: {
-            title: "Out of Bounds",
-            tags: ["Unreal Engine 5", "Shooter", "Weapon Design", "Rookie Awards Rank B"],
-            desc: `<p><strong>Rookie Awards 2025 Certified (Rank B).</strong></p>
-                   <p>On this UE5 project, I designed and balanced the entire weapon system (concepts, statistics, gameplay feel).</p>
-                   <p>My role involved close collaboration with the team to maintain global Game Design coherence.</p>
-                   <p><a href="https://www.therookies.co/projects/83829" target="_blank" style="color:#fff; text-decoration:underline;">View on The Rookies</a></p>`
+            title: "Out of Bound",
+            tags: ["Student Project", "Game Design", "Weapons", "Balancing", "Unreal Engine 5"],
+            desc: `
+      <p><strong>Here’s an example of my work on Out of Bounds</strong>. I worked on all the weapons, but here I’ll show you the pistol. If you want to see more, scroll down to find a link to my The Rookies page.</p>
+
+      <h3>🛠️ Weapon Design</h3>
+      <br>
+      <p>During the weapon design phase, we initially had only one type of shot, but after several tests, we decided to add a second one to bring more variety, depth of gameplay, and better control.</p>
+
+      <h3>🔫 Pistol</h3>
+      <br>
+      <p>When designing this weapon, we initially planned only one type of ammo. After several tests, we decided to add a second type to diversify the gameplay and offer more depth and control.</p>
+      <p>For this secondary ammo type, we were inspired by Fortnite’s flintlock pistol. The pistol is the main weapon for all players — when you die, you respawn with it, and when another weapon runs out of ammo, you automatically switch back to the pistol.</p>
+
+      <img src="./gif/Shot pistol.gif" alt="Pistol shot" style="width:100%; border-radius:10px; margin:20px 0;">
+
+      <h3>⚖️ Balancing</h3>
+      <br>
+      <p>Through many playtests and adjustments, we found a balance that satisfied the entire team. After seeing a final test with the latest tweaks, most of the feedback was positive.</p>
+
+      <h3>🔫 Pistol</h3>
+      <br>
+      <p>Balancing the pistol was quite a challenge: it had to be neither too powerful nor completely useless, since it’s the players’ base weapon. Early tests showed the pistol was too weak, making it nearly unusable. However, after multiple playtests, we found a good compromise that allowed players to fight effectively even with just the pistol.</p>
+
+      <img src="./gif/Balance pistol.gif" alt="Pistol balancing" style="width:100%; border-radius:10px; margin:20px 0;">
+
+      <p style="margin-top:25px; text-align:center;">
+        <a href="https://www.therookies.co/projects/83829" target="_blank" 
+          style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
+          Voir le projet complet sur The Rookies
+        </a>
+      </p>
+    `
         }
     },
 
-    'projet 3': {
-        image: "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')",
+    'stage': {
+        image: "url('./img/Myria logo.png')",
         fr: {
-            title: "Stage QA Lead",
-            tags: ["Management", "QA Testing", "Jira/Confluence", "Myria Editions"],
-            desc: `<p><strong>Myria Editions (Juillet - Août 2025)</strong></p>
-                   <p>J'ai assuré la direction et la coordination d'une équipe de testeurs pour garantir la qualité du projet.</p>
-                   <ul>
-                    <li>Identification et documentation des bugs critiques.</li>
-                    <li>Communication directe avec les développeurs.</li>
-                    <li>Mise en place de protocoles de test rigoureux.</li>
-                   </ul>`
+            title: "Stage Myria Éditions",
+            tags: ["Stage", "Lead", "Jeu Vidéo", "Level Design"],
+            desc: `
+      <p>Lors de mon stage chez <strong>Myria Éditions</strong>, j’ai eu l’opportunité d’occuper le rôle de <strong>Lead</strong>. 
+      J’étais responsable de la coordination d’une petite équipe de testeurs, de la communication entre les pôles, 
+      et du suivi de l’avancement des tâches pour garantir la qualité du jeu en développement.</p>
+
+      <h3 style="margin-top: 25px;">🎯 Rôles et missions</h3>
+      <br>
+      <ul>
+        <li>👥 Lead d’une équipe</li>
+        <li>💬 Communication constante entre les équipes</li>
+        <li>📝 Vérification et validation du travail effectué</li>
+        <li>⏰ Respect des deadlines et gestion du temps</li>
+        <li>🧱 Participation à la construction et la mise en place des niveaux</li>
+      </ul>
+
+      <h3 style="margin-top: 40px;">🧠 Compétences</h3>
+      <br>
+      <p>Ce stage m’a permis de développer des compétences essentielles, autant techniques qu’humaines. 
+      J’ai appris à encadrer une équipe, à communiquer efficacement, et à gérer plusieurs priorités simultanément 
+      dans un contexte de production réel.</p>
+
+      <ul>
+        <li>🏆 Leadership</li>
+        <li>💬 Communication</li>
+        <li>🧭 Organisation</li>
+        <li>⏳ Respect des deadlines</li>
+      </ul>
+
+      <h3 style="margin-top: 50px;">🕹️ Level Design : Map Metroidvania</h3>
+      <br>
+      <p>Durant mon stage, j’ai également conçu une <strong>map Metroidvania</strong>. 
+      J’ai réalisé le <strong>blocking complet</strong> et la mise en place des différentes zones afin d’assurer une bonne progression 
+      et une cohérence dans la navigation du joueur. Voici un aperçu des zones que j’ai créées :</p>
+
+      <h4 style="margin-top: 30px;">🏙️ HUB</h4>
+      <img src="./img/stage/Hub.png" alt="HUB" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 1</h4>
+      <img src="./img/stage/Zone 1.png" alt="Zone 1" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 2-1</h4>
+      <img src="./img/stage/Zone 2.1.png" alt="Zone 2-1" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 2-2</h4>
+      <img src="./img/stage/Zone 2.2.png" alt="Zone 2-2" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 3-1</h4>
+      <img src="./img/stage/Zone 3.1.png" alt="Zone 3-1" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 3-2</h4>
+      <img src="./img/stage/Zone 3.2.png" alt="Zone 3-2" style="width:100%; border-radius:10px; margin:15px 0;">
+    `
         },
         en: {
-            title: "QA Lead Intern",
-            tags: ["Management", "QA Testing", "Jira/Confluence", "Myria Editions"],
-            desc: `<p><strong>Myria Editions (July - August 2025)</strong></p>
-                   <p>I led and coordinated a team of testers to ensure project quality.</p>
-                   <ul>
-                    <li>Identification and documentation of critical bugs.</li>
-                    <li>Direct communication with developers to prioritize fixes.</li>
-                    <li>Implementation of rigorous testing protocols.</li>
-                   </ul>`
+            title: "Internship at Myria Éditions",
+            tags: ["Internship", "Lead", "Video Game", "Level Design"],
+            desc: `
+      <p>During my internship at <strong>Myria Éditions</strong>, I had the opportunity to work as a <strong>Lead</strong>. 
+      I was responsible for coordinating a small testing team, managing communication between departments, 
+      and ensuring steady task progression to maintain the quality of the ongoing game project.</p>
+
+      <h3 style="margin-top: 25px;">🎯 Roles and Missions</h3>
+      <br>
+      <ul>
+        <li>👥 Leading a small team</li>
+        <li>💬 Maintaining communication between teams</li>
+        <li>📝 Checking and validating completed work</li>
+        <li>⏰ Meeting deadlines and managing time efficiently</li>
+        <li>🧱 Contributing to level design and implementation</li>
+      </ul>
+
+      <h3 style="margin-top: 40px;">🧠 Skills</h3>
+      <br>
+      <p>This internship allowed me to strengthen both my technical and soft skills. 
+      I learned how to lead a team, communicate efficiently, and manage multiple priorities in a real production context.</p>
+
+      <ul>
+        <li>🏆 Leadership</li>
+        <li>💬 Communication</li>
+        <li>🧭 Organization</li>
+        <li>⏳ Deadline management</li>
+      </ul>
+
+      <h3 style="margin-top: 50px;">🕹️ Level Design: Metroidvania Map</h3>
+      <br>
+      <p>During my internship, I also designed a <strong>Metroidvania map</strong>. 
+      I handled the <strong>blocking process</strong> and created several interconnected areas to ensure smooth player progression 
+      and logical level flow. Here are the different zones I built:</p>
+
+      <h4 style="margin-top: 30px;">🏙️ HUB</h4>
+      <img src="./img/stage/Hub.png" alt="HUB" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 1</h4>
+      <img src="./img/stage/Zone 1.png" alt="Zone 1" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 2-1</h4>
+      <img src="./img/stage/Zone 2.1.png" alt="Zone 2-1" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 2-2</h4>
+      <img src="./img/stage/Zone 2.2.png" alt="Zone 2-2" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 3-1</h4>
+      <img src="./img/stage/Zone 3.1.png" alt="Zone 3-1" style="width:100%; border-radius:10px; margin:15px 0;">
+
+      <h4>🧩 Zone 3-2</h4>
+      <img src="./img/stage/Zone 3.2.png" alt="Zone 3-2" style="width:100%; border-radius:10px; margin:15px 0;">
+    `
         }
     },
 
