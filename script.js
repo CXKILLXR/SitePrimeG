@@ -386,16 +386,92 @@ const projectData = {
         fr: {
             title: "Formation & Skills",
             tags: ["Studio Mercier", "Master GD", "Adobe Suite", "Anglais B1"],
-            desc: `<p><strong>Formation :</strong> Mastère Jeux Vidéo - Game Design au Studio Mercier Béziers (2022-2026).</p>
-                   <p><strong>Compétences :</strong> Unreal Engine, Unity, Photoshop & Illustrator.</p>
-                   <p><strong>Langues :</strong> Anglais (Niveau B1).</p>`
+            desc: `
+<p><strong>🎯 Objectif professionnel :</strong> Devenir <strong>Game Designer</strong> chez Ubisoft, avec une spécialisation en <strong>QA Testing</strong> et une approche polyvalente du développement de jeux vidéo.</p>
+
+<br>
+<h4>💼 Expériences professionnelles</h4>
+<ul>
+  <li><strong>Myria Editions</strong> — Stage Leader d’équipe QA (Juillet - Août 2025)  
+  Coordination d’une équipe de testeurs, identification de bugs critiques et mise en place de protocoles de test.</li>
+  <li><strong>Camping LVL Les Ayguades</strong> — Réceptionniste (Juin - Août 2024)  
+  Travail en équipe dans un environnement dynamique et gestion des tâches quotidiennes.</li>
+</ul>
+<br>
+
+<h4>🎓 Formation</h4>
+<p><strong>Studio Mercier Béziers</strong> — Mastère Jeux Vidéo - Game Design (2022 - 2026)</p>
+<br>
+
+<h4>🧠 Compétences</h4>
+<ul>
+  <li><strong>Unreal Engine</strong> (Intermédiaire) — Connaissance du moteur, intégration et asset management</li>
+  <li><strong>Photoshop / Illustrator</strong> (Avancé)</li>
+  <li><strong>Unity</strong> (Débutant)</li>
+  <li><strong>Anglais</strong> (Niveau B1)</li>
+</ul>
+<br>
+
+<h4>🎮 Projets</h4>
+<ul>
+  <li><strong>Out of Bounds</strong> — Conception et équilibrage du système d’armes  
+  <a href="https://www.therookies.co/projects/83829" target="_blank" style="color: white;">Voir le projet</a></li>
+  <li><strong>Arcadia Unbound</strong> — Création de 3 classes RPG et de leur progression  
+  <a href="https://www.therookies.co/projects/82549" target="_blank" style="color: white;">Voir le projet</a></li>
+</ul>
+
+<div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
+  <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" 
+     style="pointer-events: auto; background: #fff; color: #000;">📥 CV Français</a>
+  <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" 
+     style="pointer-events: auto; background: #fff; color: #000;">📥 CV Anglais</a>
+</div>
+`,
         },
         en: {
             title: "Education & Skills",
             tags: ["Studio Mercier", "Master GD", "Adobe Suite", "English B1"],
-            desc: `<p><strong>Education:</strong> Video Game Master's - Game Design at Studio Mercier Béziers (2022-2026).</p>
-                   <p><strong>Skills:</strong> Unreal Engine, Unity, Photoshop & Illustrator.</p>
-                   <p><strong>Languages:</strong> English (Level B1).</p>`
+            desc: `
+<p><strong>🎯 Career Goal:</strong> To become a <strong>Game Designer</strong> at Ubisoft, specializing in <strong>Quality Assurance (QA)</strong> while remaining versatile across all aspects of game development.</p>
+
+<br>
+<h4>💼 Professional Experience</h4>
+<ul>
+  <li><strong>Myria Editions</strong> — QA Team Leader Intern (July - August 2025)  
+  Coordinated a team of testers, identified critical bugs, and implemented testing protocols to ensure project stability.</li>
+  <li><strong>Camping LVL Les Ayguades</strong> — Receptionist (June - August 2024)  
+  Worked efficiently within a team environment, managing multiple daily tasks in a fast-paced setting.</li>
+</ul>
+<br>
+
+<h4>🎓 Education</h4>
+<p><strong>Studio Mercier Béziers</strong> — Master's Degree in Video Games - Game Design (2022 - 2026)</p>
+<br>
+
+<h4>🧠 Skills</h4>
+<ul>
+  <li><strong>Unreal Engine</strong> (Intermediate) — Engine knowledge, integration, and asset management</li>
+  <li><strong>Photoshop / Illustrator</strong> (Advanced)</li>
+  <li><strong>Unity</strong> (Beginner)</li>
+  <li><strong>English</strong> (B1 Level)</li>
+</ul>
+<br>
+
+<h4>🎮 Projects</h4>
+<ul>
+  <li><strong>Out of Bounds</strong> — Weapon system design and balancing  
+  <a href="https://www.therookies.co/projects/83829" target="_blank" style="color: white;">View project</a></li>
+  <li><strong>Arcadia Unbound</strong> — Creation of 3 RPG classes and their progression system  
+  <a href="https://www.therookies.co/projects/82549" target="_blank" style="color: white;">View project</a></li>
+</ul>
+
+<div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
+  <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" 
+     style="pointer-events: auto; background: #fff; color: #000;">📥 French CV</a>
+  <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" 
+     style="pointer-events: auto; background: #fff; color: #000;">📥 English CV</a>
+</div>
+`,
         }
     },
 

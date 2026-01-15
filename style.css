@@ -76,37 +76,80 @@ section { position: relative; width: 100%; padding: 10vh 5vw; }
 
 /* --- NAV --- */
 nav {
-    position: fixed; top: 0; left: 0; width: 100%; padding: 20px 40px;
-    display: flex; justify-content: space-between; align-items: center;
-    z-index: 100; mix-blend-mode: difference;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.1); /* fond noir solide */
+    backdrop-filter: blur(10px); /* optionnel : effet léger de verre dépoli */
 }
+
 .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.05em; }
 
-.menu-btn {
-    font-size: 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease;
-}
-.menu-btn:hover {
-    transform: scale(1.1);
-    color: var(--accent);
-}
-
-.header-btn {
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: -0.05em;
+/* ====== Boutons Projets / CV / Contact ====== */
+.header-btn,
+.nav-link {
+    font-family: 'Poppins', sans-serif;
     color: #fff;
+    font-size: 18px;              /* plus petit que Menu */
+    font-weight: 600;             /* un peu moins épais */
+    letter-spacing: -0.03em;
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
-.header-btn:hover {
+
+.header-btn:hover,
+.nav-link:hover {
     transform: scale(1.1);
-    color: var(--accent);
+    color: #fff; /* pas de bleu */
+    opacity: 0.9;
+}
+
+/* ====== Bouton Menu ====== */
+.menu-btn {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 25px;           /* ✅ plus grand */
+    font-weight: 700;             /* plus marqué */
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.3);
+    color: #d9d9d9; /* même effet que les autres boutons */
+    opacity: 1;
+}
+
+
+/* Curseur main sur les boutons et liens */
+.menu-btn,
+.header-btn,
+.nav-link,
+button,
+a {
+    cursor: pointer;
+}
+
+.header-btn:hover,
+.nav-link:hover {
+    transform: scale(1.3); /* zoom plus fort */
+    color: #d9d9d9; /* ✅ texte un peu plus foncé au survol */
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -247,7 +290,6 @@ footer { height: 70vh; display: flex; flex-direction: column; justify-content: c
 .nav-dropdown li { margin-bottom: 15px; }
 .nav-dropdown li:last-child { margin-bottom: 0; }
 .nav-link { text-decoration: none; color: #fff; font-size: 1.1rem; font-weight: 500; display: block; transition: color 0.2s; }
-.nav-link:hover { color: var(--accent); }
 
 /* --- BUTTONS DRAPEAUX (FINAL) --- */
 .lang-btn {
@@ -369,6 +411,104 @@ footer { height: 70vh; display: flex; flex-direction: column; justify-content: c
     cursor: zoom-out;
     z-index: 10;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Par défaut : pas de curseur visible */
+body, html {
+    cursor: none;
+}
+
+/* Le curseur réapparaît uniquement sur les boutons et liens */
+a,
+button,
+.menu-btn,
+.header-btn,
+.nav-link {
+    cursor: pointer;
+}
+
+.cv-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.cv-btn {
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+    color: #d9d9d9;
+    transform: scale(1.05);
+}
+
+/* === Correction mobile spécifique du bloc FORMATION === */
+@media (max-width: 768px) and (orientation: portrait) {
+    .bento-container,
+    .bento-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 20px !important;
+    }
+
+    .bento {
+        width: 90% !important;
+        max-width: 95vw !important;
+        height: auto !important;
+        margin: 10px 0 !important;
+    }
+
+    .bento[data-type="formation"],
+    [data-translate="bento-2-title"],
+    [data-translate="bento-2-desc"] {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    [data-translate="bento-2-title"] {
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    [data-translate="bento-2-desc"] {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* === Fond noir plein pour le menu mobile === */
+@media (max-width: 768px) {
+    .nav-dropdown {
+        background-color: #555 !important; /* noir pur, non transparent */
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .nav-dropdown li a {
+        color: #fff !important; /* texte blanc */
+    }
+
+    .nav-dropdown li a:hover {
+        color: #ccc !important; /* gris clair au survol */
+    }
 }
 
 
