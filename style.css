@@ -511,6 +511,14 @@ button,
     }
 }
 
+/* 🚫 Désactivation du curseur sur mobile */
+@media (max-width: 1024px) {
+    body,
+    * {
+        cursor: none !important;
+    }
+}
+
 
 
 
