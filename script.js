@@ -597,9 +597,8 @@ function closeProject() {
     });
 }
 
-// --- CURSOR LOGIC ---
-// ✅ Curseur désactivé sur mobile / tablette
-if (window.innerWidth > 1024) {
+// ✅ Désactive totalement le curseur personnalisé sur mobile et appareils tactiles
+if (!('ontouchstart' in window)) {
     const cursorDot = document.querySelector(".cursor-dot");
     const cursorOutline = document.querySelector(".cursor-outline");
 
@@ -610,15 +609,17 @@ if (window.innerWidth > 1024) {
         cursorDot.style.left = `${posX}px`;
         cursorDot.style.top = `${posY}px`;
 
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
+        cursorOutline.animate(
+            {
+                left: `${posX}px`,
+                top: `${posY}px`
+            },
+            { duration: 500, fill: "forwards" }
+        );
     });
 
-    // tu peux aussi garder ici tes effets hover ou clic
+    // tu peux garder ici tes effets hover ou clic
 }
-
 
 window.addEventListener("mousemove", (e) => {
     const posX = e.clientX;
