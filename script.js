@@ -682,19 +682,31 @@ window.addEventListener("keydown", (e) => {
 });
 
 // --- Zoom intégré (local) dans la modale ---
-document.addEventListener('click', function (e) {
-    const img = e.target.closest('.project-modal img');
-    if (!img) return;
+// ✅ Désactive totalement le zoom sur mobile
+const isTouchDevice =
+    window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
 
-    // Si déjà zoomée → retour à la taille normale
-    if (img.classList.contains('zoomed')) {
-        img.classList.remove('zoomed');
-        return;
-    }
+if (!isTouchDevice) {
+    // On attend que tout le DOM soit prêt
+    window.addEventListener('DOMContentLoaded', () => {
+        // Ajoute le listener sur TOUTES les images dans les modales
+        document.addEventListener('click', function (e) {
+            const img = e.target.closest('.project-modal img');
+            if (!img) return;
 
-    // Sinon → on applique le zoom local
-    img.classList.add('zoomed');
-});
+            // Si déjà zoomée → retour à la taille normale
+            if (img.classList.contains('zoomed')) {
+                img.classList.remove('zoomed');
+                return;
+            }
+
+            // Sinon → on applique le zoom local
+            img.classList.add('zoomed');
+        });
+    });
+}
+
+
 
 
 
