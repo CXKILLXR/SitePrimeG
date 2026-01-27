@@ -8,15 +8,15 @@ const translations = {
         'nav-contact': "Contact",
         'nav-menu': "Menu",
         'menu-home': "Accueil",
-        'menu-manifesto': "Manifesto",
+        'menu-presentation': "Présentation",
         'menu-cv': "Curriculum",
         'menu-projects': "Projets",
         'menu-contact': "Contact",
         'close': "Fermer",
         'hero-sub': "Game Designer & QA Tester",
         'scroll-hint': "Défilé pour explorer",
-        'manifesto': "Mon ambition professionnelle est de rejoindre <span style='color:#fff'>Ubisoft</span> en tant que <span style='color:#fff'>Game Designer</span>.<br><br>Bien que spécialisé en <span style='color:#fff'>QA (Quality Assurance)</span>, je reste <span style='color:#fff'>polyvalent</span> et ouvert à différents aspects du développement de jeux vidéo.<br>Mon objectif est d’acquérir un maximum d’expérience afin de perfectionner mes compétences et d’élargir ma vision du métier.<br><br>Passionné de jeux vidéo depuis toujours, je me suis rapidement intéressé à la manière dont les <span style='color:#fff'>game designers</span> parviennent à transmettre leur vision et leurs émotions à travers le gameplay.<br>Cette réflexion m’a conduit à vouloir, à mon tour, <span style='color:#fff'>créer des expériences uniques</span> et <span style='color:#fff'>partager ma propre vision du jeu</span>.",
-        'section-cv': "Curriculum vitæ.",
+        'presentation': "Mon ambition professionnelle est de rejoindre <span style='color:#fff'>Ubisoft</span> en tant que <span style='color:#fff'>Game Designer</span>.<br><br>Bien que spécialisé en <span style='color:#fff'>QA (Quality Assurance)</span>, je reste <span style='color:#fff'>polyvalent</span> et ouvert à différents aspects du développement de jeux vidéo.<br>Mon objectif est d’acquérir un maximum d’expérience afin de perfectionner mes compétences et d’élargir ma vision du métier.<br><br>Passionné de jeux vidéo depuis toujours, je me suis rapidement intéressé à la manière dont les <span style='color:#fff'>game designers</span> parviennent à transmettre leur vision et leurs émotions à travers le gameplay.<br>Cette réflexion m’a conduit à vouloir, à mon tour, <span style='color:#fff'>créer des expériences uniques</span> et <span style='color:#fff'>partager ma propre vision du jeu</span>.",
+        'section-cv': "Curriculum Vitæ.",
 
         'bento-1-title': "Compétences",
         // MISE À JOUR : Liste à puces pour les compétences (FR)
@@ -46,14 +46,14 @@ const translations = {
         'nav-contact': "Contact",
         'nav-menu': "Menu",
         'menu-home': "Home",
-        'menu-manifesto': "Manifesto",
+        'menu-presentation': "Presentation",
         'menu-cv': "Resume",
         'menu-projects': "Projects",
         'menu-contact': "Contact",
         'close': "Close",
         'hero-sub': "Game Designer & QA Tester",
         'scroll-hint': "Scroll to explore",
-        'manifesto': "My professional ambition is to join <span style='color:#fff'>Ubisoft</span> as a <span style='color:#fff'>Game Designer</span>.<br><br>Although I specialize in <span style='color:#fff'>Quality Assurance (QA)</span>, I remain <span style='color:#fff'>versatile</span> and open to exploring different aspects of video game development.<br>My goal is to gain as much experience as possible to refine my skills and broaden my understanding of the craft.<br><br>Passionate about video games from a young age, I quickly became fascinated by how <span style='color:#fff'>game designers</span> convey their vision and emotions through gameplay.<br>This reflection led me to want, in turn, to <span style='color:#fff'>create unique experiences</span> and <span style='color:#fff'>share my own vision of the game</span>.",
+        'presentation': "My professional ambition is to join <span style='color:#fff'>Ubisoft</span> as a <span style='color:#fff'>Game Designer</span>.<br><br>Although I specialize in <span style='color:#fff'>Quality Assurance (QA)</span>, I remain <span style='color:#fff'>versatile</span> and open to exploring different aspects of video game development.<br>My goal is to gain as much experience as possible to refine my skills and broaden my understanding of the craft.<br><br>Passionate about video games from a young age, I quickly became fascinated by how <span style='color:#fff'>game designers</span> convey their vision and emotions through gameplay.<br>This reflection led me to want, in turn, to <span style='color:#fff'>create unique experiences</span> and <span style='color:#fff'>share my own vision of the game</span>.",
         'section-cv': "Curriculum Vitae.",
 
         'bento-1-title': "Skills",
@@ -80,20 +80,20 @@ const translations = {
     }
 };
 
-// Fonction pour (ré)initialiser l'animation Manifesto
-function initManifesto() {
-    const manifestoContainer = document.querySelector("#manifesto .text-reveal");
-    if(!manifestoContainer) return;
-    const text = manifestoContainer.innerText;
-    manifestoContainer.innerHTML = "";
+// Fonction pour (ré)initialiser l'animation presentation
+function initpresentation() {
+    const presentationContainer = document.querySelector("#presentation .text-reveal");
+    if(!presentationContainer) return;
+    const text = presentationContainer.innerText;
+    presentationContainer.innerHTML = "";
     text.split(" ").forEach(word => {
         const span = document.createElement("span");
         span.innerHTML = word + " ";
-        manifestoContainer.appendChild(span);
+        presentationContainer.appendChild(span);
     });
-    gsap.to("#manifesto .text-reveal span", {
+    gsap.to("#presentation .text-reveal span", {
         scrollTrigger: {
-            trigger: "#manifesto", start: "top 80%", end: "bottom 20%", scrub: 1
+            trigger: "#presentation", start: "top 80%", end: "bottom 20%", scrub: 1
         },
         opacity: 1, color: "#ffffff", stagger: 0.1
     });
@@ -114,7 +114,7 @@ function setLanguage(lang) {
             btn.classList.remove('active-lang');
         }
     });
-    initManifesto();
+    initpresentation();
 }
 
 // --- DATA PROJETS (AVEC TRADUCTION) ---
@@ -532,8 +532,8 @@ loaderTimeline
     .to("#hero-sub", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.8")
     .to("#scroll-hint", { opacity: 1, duration: 1 }, "-=0.5");
 
-// Initialisation Manifesto
-initManifesto();
+// Initialisation presentation
+initpresentation();
 
 // Bento Cards
 gsap.utils.toArray(".bento-card").forEach((card, i) => {
@@ -705,6 +705,7 @@ if (!isTouchDevice) {
         });
     });
 }
+
 
 
 

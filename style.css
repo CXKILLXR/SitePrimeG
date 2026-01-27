@@ -511,13 +511,11 @@ button,
     }
 }
 
-/* 🚫 Désactivation du curseur sur mobile */
-@media (max-width: 1024px) {
-    body,
-    * {
-        cursor: none !important;
-    }
+/* === Manifesto : texte plus large === */
+#presentation .text-reveal {
+    max-width: 1400px; /* augmente la largeur */
 }
+
 
 
 
