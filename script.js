@@ -197,74 +197,154 @@ const projectData = {
             title: "Out of Bound",
             tags: ["Projet d'études", "Game Design", "Armes", "Équilibrage", "Unreal Engine 5"],
             desc: `
-      <p><strong>Voici un exemple de mon travail sur Out of Bounds</strong>, j'ai travaillé sur toutes les armes, mais ici, je vous montre que le pistolet. Si vous voulez en voir plus, je vous invite à aller en bas de cette page pour accéder à ma page The Rookies.</p>
+<p><strong>Out of Bounds – Travail sur le Game Design des armes</strong></p>
 
-      <h3>🛠️ Conception d’armes</h3>
-      <br>
-      <p>Lors de la conception des armes, nous n'avions qu'un seul tir, mais après plusieurs tests, nous avons décidé de créer un deuxième tir afin d'ajouter de la variété et une plus grande profondeur de jeu et de contrôle.</p>
+<p>
+J’ai travaillé sur <strong>l’ensemble du système d’armes</strong> : conception, itérations, tests et équilibrage.
+Sur cette page, je me concentre volontairement sur <strong>le pistolet</strong> afin de détailler ma méthodologie de travail.
+</p>
 
-      <h3>🔫 Pistolet</h3>
-      <br>
-      <p>Lors de la conception de cette arme, nous n'avions prévu qu'une seule munition. Après plusieurs tests, nous avons décidé d'en ajouter une seconde afin de diversifier les options et d'offrir une plus grande profondeur de jeu et un meilleur contrôle.</p>
-      <p>Pour cette seconde munition, nous nous sommes inspirés du pistolet à silex de Fortnite. Le pistolet est l'arme principale de tous les joueurs. Ainsi, lorsque vous mourez, vous réapparaissez avec le pistolet, et lorsque les munitions d'une autre arme sont épuisées, vous récupérez automatiquement le pistolet.</p>
+<ul>
+  <li>🔫 <strong>Pistolet</strong> (arme de base – focus détaillé ci-dessous)</li>
+  <li>🌪️ <strong>Air Blower</strong></li>
+  <li>🧲 <strong>The Sticky Launcher</strong></li>
+  <li>🪐 <strong>The Gravity Judge</strong></li>
+  <li>⚡ <strong>The Equalaser</strong></li>
+  <li>💣 <strong>Little Bertha</strong></li>
+</ul>
 
-      <img src="./gif/Shot pistol.gif" alt="Tir du pistolet" style="width:100%; border-radius:10px; margin:20px 0;">
+<p style="margin-top:15px;">
+👉 <a href="https://www.therookies.co/projects/83829" target="_blank"
+   style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
+   Voir le projet complet sur The Rookies
+</a>
+</p>
+<br>
+<h3>🛠️ Conception d’armes</h3>
+<br>
+<p>
+Lors de la conception des armes, nous n’avions initialement qu’un seul type de tir.
+Après plusieurs phases de test, nous avons décidé d’en ajouter un second afin d’apporter
+davantage de variété, de profondeur de gameplay et un meilleur contrôle pour le joueur.
+</p>
 
-      <h3>⚖️ Équilibrage</h3>
-      <br>
-      <p>Au cours de nombreux tests et essais pour équilibrer les armes, nous avons trouvé un équilibre qui a satisfait toute l'équipe, et après avoir vu un test avec les dernières modifications, la plupart des retours ont été positifs.</p>
+<h3>🔫 Pistolet</h3>
+<br>
+<p>
+Lors de la conception de cette arme, une seule munition était prévue.
+Les tests ont montré des limites en termes de rythme et de flexibilité,
+ce qui nous a conduits à intégrer une seconde munition afin d’élargir les options de jeu.
+</p>
+<p>
+Cette seconde munition s’inspire du pistolet à silex de <em>Fortnite</em>.
+Le pistolet est l’arme principale du joueur : en cas de mort, le joueur réapparaît avec celui-ci,
+et lorsque les munitions d’une autre arme sont épuisées, le pistolet est automatiquement rééquipé.
+</p>
 
-      <h3>🔫 Pistolet</h3>
-      <br>
-      <p>L'équilibrage du pistolet a représenté un véritable défi : il fallait veiller à ce qu'il ne soit ni trop puissant ni totalement inefficace, étant donné qu'il s'agit de l'arme de base des joueurs. Au début des tests, l'arme manquait cruellement de puissance, la rendant pratiquement inutilisable. Cependant, grâce à de nombreux tests et essais en situation de jeu, nous avons pu trouver un bon compromis entre efficacité et inutilité, permettant ainsi aux joueurs de combattre uniquement avec le pistolet.</p>
+<img src="./gif/Shot pistol.gif" alt="Tir du pistolet" style="width:100%; border-radius:10px; margin:20px 0;">
 
-      <img src="./gif/Balance pistol.gif" alt="Équilibrage du pistolet" style="width:100%; border-radius:10px; margin:20px 0;">
+<h3>⚖️ Équilibrage</h3>
+<br>
+<p>
+De nombreux tests et itérations ont été nécessaires pour équilibrer l’ensemble des armes.
+Après plusieurs ajustements, nous avons trouvé un équilibre satisfaisant pour toute l’équipe,
+confirmé par des retours majoritairement positifs lors des dernières phases de test.
+</p>
 
-      <p style="margin-top:25px; text-align:center;">
-        <a href="https://www.therookies.co/projects/83829" target="_blank" 
-          style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
-          Voir le projet complet sur The Rookies
-        </a>
-      </p>
+<h3>🔫 Pistolet</h3>
+<br>
+<p>
+L’équilibrage du pistolet a représenté un véritable défi :
+il devait rester suffisamment efficace sans devenir dominant,
+tout en conservant son rôle d’arme de base.
+</p>
+<p>
+Les premiers tests montraient une arme trop faible, presque inutilisable.
+Grâce à de nombreuses sessions de test en conditions réelles,
+nous avons trouvé un compromis permettant aux joueurs de rester compétitifs
+même en utilisant uniquement le pistolet.
+</p>
 
-    `
+<img src="./gif/Balance pistol.gif" alt="Équilibrage du pistolet" style="width:100%; border-radius:10px; margin:20px 0;">
+`
         },
+
         en: {
             title: "Out of Bound",
             tags: ["Student Project", "Game Design", "Weapons", "Balancing", "Unreal Engine 5"],
             desc: `
-      <p><strong>Here’s an example of my work on Out of Bounds</strong>. I worked on all the weapons, but here I’ll show you the pistol. If you want to see more, scroll down to find a link to my The Rookies page.</p>
+<p><strong>Out of Bounds – Weapon Game Design Work</strong></p>
 
-      <h3>🛠️ Weapon Design</h3>
-      <br>
-      <p>During the weapon design phase, we initially had only one type of shot, but after several tests, we decided to add a second one to bring more variety, depth of gameplay, and better control.</p>
+<p>
+I worked on the <strong>entire weapon system</strong>, including design, iteration, playtesting,
+and balancing. On this page, I focus specifically on the <strong>pistol</strong>
+to clearly showcase my design process.
+</p>
 
-      <h3>🔫 Pistol</h3>
-      <br>
-      <p>When designing this weapon, we initially planned only one type of ammo. After several tests, we decided to add a second type to diversify the gameplay and offer more depth and control.</p>
-      <p>For this secondary ammo type, we were inspired by Fortnite’s flintlock pistol. The pistol is the main weapon for all players — when you die, you respawn with it, and when another weapon runs out of ammo, you automatically switch back to the pistol.</p>
+<ul>
+  <li>🔫 <strong>Pistol</strong> (base weapon – detailed focus below)</li>
+  <li>🌪️ <strong>Air Blower</strong></li>
+  <li>🧲 <strong>The Sticky Launcher</strong></li>
+  <li>🪐 <strong>The Gravity Judge</strong></li>
+  <li>⚡ <strong>The Equalaser</strong></li>
+  <li>💣 <strong>Little Bertha</strong></li>
+</ul>
 
-      <img src="./gif/Shot pistol.gif" alt="Pistol shot" style="width:100%; border-radius:10px; margin:20px 0;">
+<p style="margin-top:15px;">
+👉 <a href="https://www.therookies.co/projects/83829" target="_blank"
+   style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
+   View the full project on The Rookies
+</a>
+</p>
+<br>
+<h3>🛠️ Weapon Design</h3>
+<br>
+<p>
+During the weapon design phase, we initially had only one firing mode.
+After multiple playtests, we introduced a second one to add more gameplay variety,
+depth, and better player control.
+</p>
 
-      <h3>⚖️ Balancing</h3>
-      <br>
-      <p>Through many playtests and adjustments, we found a balance that satisfied the entire team. After seeing a final test with the latest tweaks, most of the feedback was positive.</p>
+<h3>🔫 Pistol</h3>
+<br>
+<p>
+When designing the pistol, only one ammo type was planned at first.
+Playtests revealed limitations, leading us to add a second ammo type
+to enhance flexibility and player choice.
+</p>
+<p>
+This secondary ammo was inspired by Fortnite’s flintlock pistol.
+The pistol serves as the player’s main weapon: upon death, players respawn with it,
+and when another weapon runs out of ammo, they automatically switch back to the pistol.
+</p>
 
-      <h3>🔫 Pistol</h3>
-      <br>
-      <p>Balancing the pistol was quite a challenge: it had to be neither too powerful nor completely useless, since it’s the players’ base weapon. Early tests showed the pistol was too weak, making it nearly unusable. However, after multiple playtests, we found a good compromise that allowed players to fight effectively even with just the pistol.</p>
+<img src="./gif/Shot pistol.gif" alt="Pistol shot" style="width:100%; border-radius:10px; margin:20px 0;">
 
-      <img src="./gif/Balance pistol.gif" alt="Pistol balancing" style="width:100%; border-radius:10px; margin:20px 0;">
+<h3>⚖️ Balancing</h3>
+<br>
+<p>
+Through extensive testing and iteration, we achieved a balance that satisfied the entire team.
+Final playtests with the latest adjustments received mostly positive feedback.
+</p>
 
-      <p style="margin-top:25px; text-align:center;">
-        <a href="https://www.therookies.co/projects/83829" target="_blank" 
-          style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">
-          Voir le projet complet sur The Rookies
-        </a>
-      </p>
-    `
+<h3>🔫 Pistol</h3>
+<br>
+<p>
+Balancing the pistol was particularly challenging:
+it needed to remain effective without becoming overpowered,
+while still fulfilling its role as the base weapon.
+</p>
+<p>
+Early tests showed the pistol was too weak and nearly unusable.
+After numerous playtests, we reached a balanced state that allowed players
+to remain competitive even when relying solely on the pistol.
+</p>
+
+<img src="./gif/Balance pistol.gif" alt="Pistol balancing" style="width:100%; border-radius:10px; margin:20px 0;">
+`
         }
     },
+
 
     'stage': {
         image: "url('./img/Myria logo.png')",
@@ -387,7 +467,9 @@ const projectData = {
             title: "Formation & Skills",
             tags: ["Studio Mercier", "Master GD", "Adobe Suite", "Anglais B1"],
             desc: `
-<p><strong>🎯 Objectif professionnel :</strong> Devenir <strong>Game Designer</strong> chez Ubisoft, avec une spécialisation en <strong>QA Testing</strong> et une approche polyvalente du développement de jeux vidéo.</p>
+<p><strong>🎯 Objectif professionnel :</strong> <strong>Intégrer une grande entreprise de jeux vidéo</strong> en tant que <strong>QA Tester</strong>, afin de contribuer activement à la qualité et à la stabilité des productions.
+
+Grâce à une approche rigoureuse, une bonne compréhension des systèmes de jeu et une forte capacité d’analyse, mon objectif est d’évoluer progressivement vers un poste de <strong>Game Designer</strong>, en mettant à profit mon expérience en QA pour concevoir des expériences de jeu cohérentes, équilibrées et centrées sur le joueur.
 
 <br>
 <h4>💼 Expériences professionnelles</h4>
@@ -405,7 +487,7 @@ const projectData = {
 
 <h4>🧠 Compétences</h4>
 <ul>
-  <li><strong>Unreal Engine</strong> (Intermédiaire) — Connaissance du moteur, intégration et asset management</li>
+  <li><strong>Unreal Engine</strong> (Intermédiaire) — Intégration, asset management et blueprint</li>
   <li><strong>Photoshop / Illustrator</strong> (Avancé)</li>
   <li><strong>Unity</strong> (Débutant)</li>
   <li><strong>Anglais</strong> (Niveau B1)</li>
@@ -432,7 +514,9 @@ const projectData = {
             title: "Education & Skills",
             tags: ["Studio Mercier", "Master GD", "Adobe Suite", "English B1"],
             desc: `
-<p><strong>🎯 Career Goal:</strong> To become a <strong>Game Designer</strong> at Ubisoft, specializing in <strong>Quality Assurance (QA)</strong> while remaining versatile across all aspects of game development.</p>
+<p><strong>🎯 Career Goal:</strong> <strong>Join a major video game company</strong> as a <strong>QA Tester</strong>, in order to actively contribute to the quality and stability of productions.
+
+Thanks to a rigorous approach, a good understanding of game systems, and strong analytical skills, my goal is to gradually progress to a position as a <strong>Game Designer</strong>, leveraging my QA experience to design consistent, balanced, and player-centered gaming experiences.
 
 <br>
 <h4>💼 Professional Experience</h4>
@@ -450,7 +534,7 @@ const projectData = {
 
 <h4>🧠 Skills</h4>
 <ul>
-  <li><strong>Unreal Engine</strong> (Intermediate) — Engine knowledge, integration, and asset management</li>
+  <li><strong>Unreal Engine</strong> (Intermediate) — Integration, asset management and blueprint</li>
   <li><strong>Photoshop / Illustrator</strong> (Advanced)</li>
   <li><strong>Unity</strong> (Beginner)</li>
   <li><strong>English</strong> (B1 Level)</li>
@@ -705,6 +789,7 @@ if (!isTouchDevice) {
         });
     });
 }
+
 
 
 
