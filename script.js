@@ -3,82 +3,122 @@ let currentLang = 'fr'; // Langue par défaut
 
 const translations = {
     fr: {
-        'nav-projects': "Projets",
-        'nav-cv': "CV",
-        'nav-contact': "Contact",
-        'nav-menu': "Menu",
-        'menu-home': "Accueil",
-        'menu-presentation': "Présentation",
-        'menu-cv': "Curriculum",
-        'menu-projects': "Projets",
-        'menu-contact': "Contact",
-        'close': "Fermer",
-        'hero-sub': "Game Designer & QA Tester",
-        'scroll-hint': "Défilé pour explorer",
-        'presentation': "Mon ambition professionnelle est de rejoindre <span style='color:#fff'>Ubisoft</span> en tant que <span style='color:#fff'>Game Designer</span>.<br><br>Bien que spécialisé en <span style='color:#fff'>QA (Quality Assurance)</span>, je reste <span style='color:#fff'>polyvalent</span> et ouvert à différents aspects du développement de jeux vidéo.<br>Mon objectif est d’acquérir un maximum d’expérience afin de perfectionner mes compétences et d’élargir ma vision du métier.<br><br>Passionné de jeux vidéo depuis toujours, je me suis rapidement intéressé à la manière dont les <span style='color:#fff'>game designers</span> parviennent à transmettre leur vision et leurs émotions à travers le gameplay.<br>Cette réflexion m’a conduit à vouloir, à mon tour, <span style='color:#fff'>créer des expériences uniques</span> et <span style='color:#fff'>partager ma propre vision du jeu</span>.",
-        'section-cv': "Curriculum Vitæ.",
+        /* ===== TITRE ===== */
+        "cv-title": "Curriculum Vitae.",
 
-        'bento-1-title': "Compétences",
-        // MISE À JOUR : Liste à puces pour les compétences (FR)
-        'bento-1-desc': "<ul style='margin-left: 20px; list-style-type: disc;'><li>Unreal Engine (Intermédiaire) | Connaissance du moteur / Modification de variable et intégration / Asset management</li><li>Unity (Débutant)</li><li>Photoshop (Avancé)</li><li>AI Illustrator (Avancé)</li></ul>",
+        /* ===== PRÉSENTATION ===== */
+        "cv-presentation-title": "Présentation",
+        "cv-presentation-p1": "Mon ambition professionnelle est d’intégrer une grande entreprise de jeux vidéo en tant que QA Tester. Grâce à une approche rigoureuse, un fort sens de l’analyse et une bonne compréhension des mécaniques de jeu, je souhaite contribuer activement à la qualité, à la stabilité et à l’expérience globale des productions.",
+        "cv-presentation-p2": "Spécialisé en QA (Quality Assurance) tout en restant polyvalent, mon objectif est d’acquérir un maximum d’expérience au sein d’équipes de production afin de développer une vision complète du processus de création d’un jeu vidéo.",
+        "cv-presentation-p3": "Passionné de jeux vidéo depuis toujours, je m’intéresse particulièrement à la manière dont les game designers transmettent leur vision via le gameplay. À long terme, je souhaite évoluer vers un poste de Game Designer.",
 
-        'bento-2-title': "Formation",
-        'bento-2-desc': "Mastère Game Design au Studio Mercier (2022-2026).",
+        /* ===== OBJECTIF ===== */
+        "cv-objective-title": "🎯 Objectif professionnel",
+        "cv-objective-desc": "QA Tester au sein d’une grande entreprise de jeux vidéo, avec une évolution progressive vers un poste de Game Designer.",
 
-        'bento-3-title': "Expérience",
-        'bento-3-desc': "Stage QA Lead chez Myria Editions. Management d'équipe, rédaction de plans de tests et reporting de bugs critiques. Game Designer sur plusieurs projets étudiants majeurs.",
+        /* ===== EXPÉRIENCES ===== */
+        "cv-experience-title": "💼 Expériences professionnelles",
+        "cv-experience-list": `
+            <li><strong>Myria Éditions</strong> — Stage QA Lead (2025)</li>
+            <li>Coordination d’équipe QA</li>
+            <li>Plans de tests & bug tracking</li>
+            <li><strong>Camping LVL Les Ayguades</strong> — Réceptionniste (2024)</li>
+        `,
 
-        'card-cv-tag': "CV",
-        'card-cv-title': "Mon Parcours",
-        'card-cv-desc': "Détail complet de mon parcours professionnel.",
-        'btn-view': "Voir le détail",
-        'section-projects': "Projet.",
-        'card-1-desc': "Une boutique WooCommerce ultra-rapide avec une interface 'Headless'. +40% de conversion.",
-        'card-2-desc': "Application React consommant une API en temps réel. Visualisation de données complexe.",
-        'card-3-desc': "Les origines. Un site statique performant qui a posé les bases de mon apprentissage.",
-        'footer-ready': "Prêt pour le prochain niveau ?",
-        'footer-click': "(Cliquer pour me contacter)",
-        'footer-cta': "Échangeons."
+        /* ===== FORMATION ===== */
+        "cv-education-title": "🎓 Formation",
+        "cv-education-desc": `
+            <strong>Studio Mercier – Béziers</strong><br>
+            Mastère Jeux Vidéo – Game Design<br>
+            2022 – 2026
+        `,
+
+        /* ===== COMPÉTENCES ===== */
+        "cv-skills-title": "🧠 Compétences",
+        "cv-skills-list": `
+            <li>Unreal Engine (Intermédiaire)</li>
+            <li>QA Testing & Bug Tracking</li>
+            <li>Game Design & Équilibrage</li>
+            <li>Photoshop / Illustrator</li>
+            <li>Unity (Débutant)</li>
+            <li>Anglais B1</li>
+        `,
+
+        /* ===== PROJETS ===== */
+        "cv-projects-title": "🎮 Projets",
+        "cv-projects-list": `
+            <li>Out of Bounds — Game Design & Armes</li>
+            <li>Arcadia Unbound — RPG & Progression</li>
+            <li>Stage Myria Éditions — QA & Level Design</li>
+        `,
+
+        /* ===== DOWNLOAD ===== */
+        "cv-download-title": "📄 Télécharger mon CV",
+        "cv-download-links": `
+            <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank">CV Français</a>
+            <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank">CV Anglais</a>
+        `
     },
+
     en: {
-        'nav-projects': "Projects",
-        'nav-cv': "Resume",
-        'nav-contact': "Contact",
-        'nav-menu': "Menu",
-        'menu-home': "Home",
-        'menu-presentation': "Presentation",
-        'menu-cv': "Resume",
-        'menu-projects': "Projects",
-        'menu-contact': "Contact",
-        'close': "Close",
-        'hero-sub': "Game Designer & QA Tester",
-        'scroll-hint': "Scroll to explore",
-        'presentation': "My professional ambition is to join <span style='color:#fff'>Ubisoft</span> as a <span style='color:#fff'>Game Designer</span>.<br><br>Although I specialize in <span style='color:#fff'>Quality Assurance (QA)</span>, I remain <span style='color:#fff'>versatile</span> and open to exploring different aspects of video game development.<br>My goal is to gain as much experience as possible to refine my skills and broaden my understanding of the craft.<br><br>Passionate about video games from a young age, I quickly became fascinated by how <span style='color:#fff'>game designers</span> convey their vision and emotions through gameplay.<br>This reflection led me to want, in turn, to <span style='color:#fff'>create unique experiences</span> and <span style='color:#fff'>share my own vision of the game</span>.",
-        'section-cv': "Curriculum Vitae.",
+        /* ===== TITRE ===== */
+        "cv-title": "Curriculum Vitae.",
 
-        'bento-1-title': "Skills",
-        // MISE À JOUR : Liste à puces pour les compétences (EN)
-        'bento-1-desc': "<ul style='margin-left: 20px; list-style-type: disc;'><li>Unreal Engine (Intermediate) | Engine knowledge / Variable modification & integration / Asset management</li><li>Unity (Beginner)</li><li>Photoshop (Advanced)</li><li>AI Illustrator (Advanced)</li></ul>",
+        /* ===== PRÉSENTATION ===== */
+        "cv-presentation-title": "Presentation",
+        "cv-presentation-p1": "My professional ambition is to join a major video game company as a QA Tester. With a rigorous approach, strong analytical skills, and a solid understanding of game mechanics, I aim to actively contribute to the quality, stability, and overall experience of the productions I work on.",
+        "cv-presentation-p2": "Specialized in QA (Quality Assurance) while remaining versatile, my goal is to gain as much experience as possible within production teams in order to develop a complete understanding of the video game creation process.",
+        "cv-presentation-p3": "Passionate about video games since childhood, I am particularly interested in how game designers convey their vision through gameplay. In the long term, I aim to evolve into a Game Designer role.",
 
-        'bento-2-title': "Education",
-        'bento-2-desc': "Game Design Master's at Studio Mercier (2022-2026).",
+        /* ===== OBJECTIVE ===== */
+        "cv-objective-title": "🎯 Career Objective",
+        "cv-objective-desc": "QA Tester within a major video game company, with a gradual evolution toward a Game Designer position.",
 
-        'bento-3-title': "Experience",
-        'bento-3-desc': "QA Lead Intern at Myria Editions. Team management, test plan writing, and critical bug reporting. Game Designer on multiple major student projects.",
+        /* ===== EXPERIENCE ===== */
+        "cv-experience-title": "💼 Professional Experience",
+        "cv-experience-list": `
+            <li><strong>Myria Éditions</strong> — QA Lead Intern (2025)</li>
+            <li>QA team coordination</li>
+            <li>Test plans & bug tracking</li>
+            <li><strong>Camping LVL Les Ayguades</strong> — Receptionist (2024)</li>
+        `,
 
-        'card-cv-tag': "Resume",
-        'card-cv-title': "My Journey",
-        'card-cv-desc': "Full detail of my professional background.",
-        'btn-view': "View Case Study",
-        'section-projects': "Selected Work.",
-        'card-1-desc': "Ultra-fast WooCommerce shop with Headless interface. +40% conversion rate.",
-        'card-2-desc': "React app consuming real-time API. Complex data visualization.",
-        'card-3-desc': "The origins. A performant static site that laid the foundations of my learning.",
-        'footer-ready': "Ready for the next level?",
-        'footer-click': "(Click to contact me)",
-        'footer-cta': "Let's Talk."
+        /* ===== EDUCATION ===== */
+        "cv-education-title": "🎓 Education",
+        "cv-education-desc": `
+            <strong>Studio Mercier – Béziers</strong><br>
+            Master’s Degree in Video Games – Game Design<br>
+            2022 – 2026
+        `,
+
+        /* ===== SKILLS ===== */
+        "cv-skills-title": "🧠 Skills",
+        "cv-skills-list": `
+            <li>Unreal Engine (Intermediate)</li>
+            <li>QA Testing & Bug Tracking</li>
+            <li>Game Design & Balancing</li>
+            <li>Photoshop / Illustrator</li>
+            <li>Unity (Beginner)</li>
+            <li>English B1</li>
+        `,
+
+        /* ===== PROJECTS ===== */
+        "cv-projects-title": "🎮 Projects",
+        "cv-projects-list": `
+            <li>Out of Bounds — Weapon Game Design</li>
+            <li>Arcadia Unbound — RPG Systems & Progression</li>
+            <li>Myria Éditions Internship — QA & Level Design</li>
+        `,
+
+        /* ===== DOWNLOAD ===== */
+        "cv-download-title": "📄 Download my CV",
+        "cv-download-links": `
+            <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank">French CV</a>
+            <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank">English CV</a>
+        `
     }
 };
+
 
 // Fonction pour (ré)initialiser l'animation presentation
 function initpresentation() {
@@ -707,38 +747,6 @@ links.forEach(link => {
     });
 });
 
-// --- MENU LOGIC ---
-const menuBtn = document.querySelector('.menu-btn');
-const dropdown = document.querySelector('.nav-dropdown');
-const navLinks = document.querySelectorAll('.nav-link');
-
-menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('active');
-    const isFr = currentLang === 'fr';
-    if (dropdown.classList.contains('active')) {
-        menuBtn.innerText = isFr ? "Fermer" : "Close";
-    } else {
-        menuBtn.innerText = isFr ? "Menu" : "Menu";
-    }
-});
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        dropdown.classList.remove('active');
-        menuBtn.innerText = currentLang === 'fr' ? "Menu" : "Menu";
-    });
-});
-
-window.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
-        if (dropdown.classList.contains('active')) {
-            dropdown.classList.remove('active');
-            menuBtn.innerText = currentLang === 'fr' ? "Menu" : "Menu";
-        }
-    }
-});
-
 // --- AMÉLIORATIONS DE FERMETURE DES MODALES ---
 
 // 1. Fermer en cliquant sur les côtés (à l'extérieur du contenu)
@@ -755,12 +763,6 @@ window.addEventListener("keydown", (e) => {
         // On vérifie si la modale est actuellement affichée
         if (modal.style.display === "block") {
             closeProject();
-        }
-
-        // Optionnel : Fermer aussi le menu dropdown si on appuie sur Echap
-        if (dropdown.classList.contains('active')) {
-            dropdown.classList.remove('active');
-            menuBtn.innerText = currentLang === 'fr' ? "Menu" : "Menu";
         }
     }
 });
@@ -789,6 +791,11 @@ if (!isTouchDevice) {
         });
     });
 }
+// ===== INITIALISATION DE LA LANGUE AU CHARGEMENT =====
+window.addEventListener("DOMContentLoaded", () => {
+    setLanguage(currentLang); // currentLang = 'fr'
+});
+
 
 
 

@@ -35,18 +35,9 @@
 
     <div class="nav-wrapper">
         <a href="#projects" class="header-btn" data-translate="nav-projects">Projets</a>
-        <a href="#skills" class="header-btn" data-translate="nav-cv">CV</a>
+        <a href="#curriculum" class="header-btn" data-translate="nav-curriculum">Curriculum</a>
         <a href="javascript:void(0);" onclick="openProject('contact')" class="header-btn" data-translate="nav-contact">Contact</a>
 
-        <div class="menu-btn" data-translate="nav-menu">Menu</div>
-
-        <ul class="nav-dropdown">
-            <li><a href="#hero" class="nav-link" data-translate="menu-home">Accueil</a></li>
-            <li><a href="#presentation" class="nav-link" data-translate="menu-presentation">Présentation</a></li>
-            <li><a href="#skills" class="nav-link" data-translate="menu-cv">Curriculum</a></li>
-            <li><a href="#projects" class="nav-link" data-translate="menu-projects">Projets</a></li>
-            <li><a href="javascript:void(0);" onclick="openProject('contact')" class="nav-link" data-translate="menu-contact">Contact</a></li>
-        </ul>
     </div>
 </nav>
 
@@ -72,35 +63,60 @@
     </div>
 </section>
 
-<section style="min-height: 100vh; display: flex; align-items: center; justify-content: center;" id="presentation">
-    <div class="text-reveal highlight-text" id="presentation-text" data-translate="presentation">
-        Mon ambition professionnelle est de rejoindre <span style="color:#fff">Ubisoft</span> en tant que <span style="color:#fff">Game Designer</span>.<br><br>
-        Bien que spécialisé en <span style="color:#fff">QA (Quality Assurance)</span>, je reste <span style="color:#fff">polyvalent</span> et ouvert à différents aspects du développement de jeux vidéo.<br>
-        Mon objectif est d’acquérir un maximum d’expérience afin de perfectionner mes compétences et d’élargir ma vision du métier.<br><br>
-        Passionné de jeux vidéo depuis toujours, je me suis rapidement intéressé à la manière dont les <span style="color:#fff">game designers</span> parviennent à transmettre leur vision et leurs émotions à travers le gameplay.<br>
-        Cette réflexion m’a conduit à vouloir, à mon tour, <span style="color:#fff">créer des expériences uniques</span> et <span style="color:#fff">partager ma propre vision du jeu</span>.
-    </div>
-</section>
 
-<section id="skills">
-    <h2 class="section-header" style="text-align: center;" data-translate="section-cv">
-        Curriculum Vitæ.
-    </h2>
-</section>
+<section id="curriculum">
 
+    <h2 class="section-header" data-translate="cv-title">Curriculum Vitae.</h2>
 
-    <div class="card-container" style="height: auto; margin-top: 20px; position: relative; z-index: 5; max-width: 1200px; width: 100%; margin-left: auto; margin-right: auto;">
-        <div class="card" onclick="openProject('cv')" data-id="cv" style="width: 100%;">
-            <div class="card-visual" id="cv-visual"></div>
+    <div class="cv-big-card">
 
-            <div class="card-info">
-                <div class="card-tag" data-translate="card-cv-tag">CV</div>
-                <h3 class="bento-title" style="font-size: 2.5rem;" data-translate="card-cv-title">Mon Parcours</h3>
-                <p class="bento-desc" data-translate="card-cv-desc">Détail complet de mon parcours professionnel.</p>
-                <span class="btn-fake" data-translate="btn-view">Voir le détail</span>
+        <!-- COLONNE GAUCHE -->
+        <div class="cv-left">
+            <h3 data-translate="cv-presentation-title">Présentation</h3>
+
+            <p data-translate="cv-presentation-p1"></p>
+            <p data-translate="cv-presentation-p2"></p>
+            <p data-translate="cv-presentation-p3"></p>
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="cv-right">
+
+            <div class="cv-block">
+                <h4 data-translate="cv-objective-title">🎯 Objectif professionnel</h4>
+                <p data-translate="cv-objective-desc"></p>
             </div>
+
+            <div class="cv-block">
+                <h4 data-translate="cv-experience-title">💼 Expériences professionnelles</h4>
+                <ul data-translate="cv-experience-list"></ul>
+            </div>
+
+            <div class="cv-block">
+                <h4 data-translate="cv-education-title">🎓 Formation</h4>
+                <p data-translate="cv-education-desc"></p>
+            </div>
+
+            <div class="cv-block">
+                <h4 data-translate="cv-skills-title">🧠 Compétences</h4>
+                <ul data-translate="cv-skills-list"></ul>
+            </div>
+
+            <div class="cv-block">
+                <h4 data-translate="cv-projects-title">🎮 Projets</h4>
+                <ul data-translate="cv-projects-list"></ul>
+            </div>
+
+            <div class="cv-block">
+                <h4 data-translate="cv-download-title">📄 Télécharger mon CV</h4>
+                <div class="cv-downloads" data-translate="cv-download-links"></div>
+            </div>
+
         </div>
     </div>
+</section>
+
+
 </div>
 
 <div class="project-wrap" id="projects">
