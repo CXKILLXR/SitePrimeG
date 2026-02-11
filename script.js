@@ -3,6 +3,23 @@ let currentLang = 'fr'; // Langue par défaut
 
 const translations = {
     fr: {
+        // Nav
+        "nav-projects": "Projets",
+        "nav-curriculum": "Présentation",
+        "nav-contact": "Contact",
+        "footer-ready": "Prêt pour le prochain niveau ?",
+        "footer-cta": "Échangeons.",
+        "footer-click": "(Cliquer pour me contacter)",
+        "section-projects": "Projets.",
+        "scroll-hint": "Défiler pour explorer",
+        "btn-view": "Voir l'étude",
+        "bloc-title-p1": "Projet 1",
+        "bloc-title-p2": "Projet 2",
+        "bloc-title-p3": "Projet 3",
+        "summary-stage": "Au sein de la maison d'édition, j'ai réalisé nombreux playtest afin d'avoir un prototype le plus proche de nos idées pour que les équipes suivante puissent avoir toutes les idées à intentions qu'on voulait donner. Mes missions incluaient la rédaction des playtest, la coordination d'une équipe et le suivi rigoureux du bug tracking.",
+        "summary-oob": "Un FPS nerveux développé sous Unreal Engine. Focus sur le feeling des armes, l'équilibrage des armes en multijoueur et la réalisation de tests techniques pour optimiser les performances et le gameplay.",
+        "summary-arcadia": "Un projet de RPG ambitieux où j'ai conçu les systèmes de progression et les arbres de compétences, tout en travaillant sur la cohérence au gameplay.",
+
         /* ===== TITRE ===== */
         "cv-title": "Curriculum Vitae.",
 
@@ -61,7 +78,23 @@ const translations = {
     },
 
     en: {
-        /* ===== TITRE ===== */
+        // Nav
+        "nav-projects": "Projects",
+        "nav-curriculum": "Presentation",
+        "nav-contact": "Contact",
+        "footer-ready": "Ready for the next level ?",
+        "footer-cta": "Let's Talk.",
+        "footer-click": "(Click to contact me)",
+        "section-projects": "Projects.",
+        "scroll-hint": "Scroll to explore",
+        "btn-view": "See the study",
+        "bloc-title-p1": "Project 1",
+        "bloc-title-p2": "Project 2",
+        "bloc-title-p3": "Project 3",
+        "summary-stage": "Within the publishing house, I conducted numerous playtests in order to create a prototype that was as close as possible to our ideas, so that the teams that followed could have all the ideas we wanted to convey. My tasks included writing playtests, coordinating a team and rigorously monitoring bug tracking.",
+        "summary-oob": "A fast-paced FPS developed using Unreal Engine. Focus on weapon feel, multiplayer weapon balancing, and technical testing to optimise performance and gameplay.",
+        "summary-arcadia": "An ambitious RPG project where I designed the progression systems and skill trees, while working on gameplay consistency.",
+
         "cv-title": "Curriculum Vitae.",
 
         /* ===== PRÉSENTATION ===== */
@@ -394,7 +427,7 @@ to remain competitive even when relying solely on the pistol.
             desc: `
       <p>Lors de mon stage chez <strong>Myria Éditions</strong>, j’ai eu l’opportunité d’occuper le rôle de <strong>Lead</strong>. 
       J’étais responsable de la coordination d’une petite équipe de testeurs, de la communication entre les pôles, 
-      et du suivi de l’avancement des tâches pour garantir la qualité du jeu en développement.</p>
+      et du suivi de l’avancement des tâches pour garantir la qualité du jeu en développement ainsi que de <strong>fournir un prototype</strong> le plus complet possible afin de <strong>transmettre les idées à intentions aux équipes futures.</strong> </p>
 
       <h3 style="margin-top: 25px;">🎯 Rôles et missions</h3>
       <br>
@@ -450,7 +483,7 @@ to remain competitive even when relying solely on the pistol.
             desc: `
       <p>During my internship at <strong>Myria Éditions</strong>, I had the opportunity to work as a <strong>Lead</strong>. 
       I was responsible for coordinating a small testing team, managing communication between departments, 
-      and ensuring steady task progression to maintain the quality of the ongoing game project.</p>
+      and monitoring task progress to ensure the quality of the game under development, as well as <strong>providing a prototype</strong> that is as complete as possible in order to <strong>convey ideas and intentions to future teams.</strong> </p>
 
       <h3 style="margin-top: 25px;">🎯 Roles and Missions</h3>
       <br>
@@ -667,17 +700,34 @@ gsap.utils.toArray(".bento-card").forEach((card, i) => {
     });
 });
 
-// Stacking Cards Logic
-const cards = gsap.utils.toArray(".card-container");
-cards.forEach((card, i) => {
-    if (i === cards.length - 1) return;
-    const innerCard = card.querySelector(".card");
-    gsap.to(innerCard, {
-        scrollTrigger: {
-            trigger: card, start: "top top", end: "bottom top", scrub: true,
-        },
-        scale: 0.9, opacity: 0.8, filter: "blur(5px)"
-    });
+const projectCards = gsap.utils.toArray('.card-container');
+
+projectCards.forEach((container, i) => {
+    if (i < projectCards.length - 1) {
+        const card = container.querySelector('.card');
+
+        gsap.to(card, {
+            yPercent: 110,
+            opacity: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: container,
+                start: "top top",
+                end: "+=100%",
+                scrub: true,
+                pin: true,
+                pinSpacing: false,
+                onUpdate: (self) => {
+                    // Si la carte est descendue à plus de 90%, on libère les clics
+                    if (self.progress > 0.9) {
+                        container.classList.add('pass-through');
+                    } else {
+                        container.classList.remove('pass-through');
+                    }
+                }
+            }
+        });
+    }
 });
 
 // --- MODAL LOGIC ---

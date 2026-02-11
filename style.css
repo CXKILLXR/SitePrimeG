@@ -134,9 +134,29 @@ nav {
 
 /* --- STACKING CARDS (PROJETS) --- */
 .project-wrap { position: relative; padding-bottom: 20vh; }
+/* Modifie cette classe existante */
 .card-container {
-    height: 100vh; display: flex; align-items: center; justify-content: center;
-    position: sticky; top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden; /* Important pour cacher la carte qui descend */
+}
+
+/* Ajoute ces z-index pour que "Stage" soit au-dessus d'Arcadia */
+.card-container:nth-child(1) { z-index: 3; } /* Stage */
+.card-container:nth-child(2) { z-index: 2; } /* Out of Bounds */
+.card-container:nth-child(3) { z-index: 1; } /* Arcadia */
+
+/* Modifie l'origine de l'animation dans .card */
+.card {
+    /* ... tes propriétés actuelles ... */
+    transform-origin: center bottom;
+}
+.card-container.pass-through {
+    pointer-events: none;
 }
 .card {
     width: 80vw; height: 70vh; background: #161617; border-radius: 40px;
@@ -533,6 +553,15 @@ button,
 }
 .section-header {
     margin-bottom: 60px; /* espace entre le titre et le bloc */
+}
+
+.project-summary {
+    color: var(--text-dim);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 500px; /* On élargit un peu pour le texte long */
+    opacity: 0.9;
 }
 
 
