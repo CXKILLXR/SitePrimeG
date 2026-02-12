@@ -16,8 +16,8 @@ const translations = {
         "bloc-title-p1": "Projet 1",
         "bloc-title-p2": "Projet 2",
         "bloc-title-p3": "Projet 3",
-        "summary-stage": "Au sein de la maison d'édition, j'ai réalisé nombreux playtest afin d'avoir un prototype le plus proche de nos idées pour que les équipes suivante puissent avoir toutes les idées à intentions qu'on voulait donner. Mes missions incluaient la rédaction des playtest, la coordination d'une équipe et le suivi rigoureux du bug tracking.",
-        "summary-oob": "Un FPS nerveux développé sous Unreal Engine. Focus sur le feeling des armes, l'équilibrage des armes en multijoueur et la réalisation de tests techniques pour optimiser les performances et le gameplay.",
+        "summary-stage": "Au sein de la maison d'édition, j'ai réalisé nombreux playtest afin d'avoir un prototype le plus proche de nos idées pour que les équipes futur.",
+        "summary-oob": "Un FPS nerveux développé sous Unreal Engine. Focus sur le feeling des armes, l'équilibrage des armes en multijoueur et la réalisation de tests techniques pour optimiser le gameplay.",
         "summary-arcadia": "Un projet de RPG ambitieux où j'ai conçu les systèmes de progression et les arbres de compétences, tout en travaillant sur la cohérence au gameplay.",
 
         /* ===== TITRE ===== */
@@ -91,8 +91,8 @@ const translations = {
         "bloc-title-p1": "Project 1",
         "bloc-title-p2": "Project 2",
         "bloc-title-p3": "Project 3",
-        "summary-stage": "Within the publishing house, I conducted numerous playtests in order to create a prototype that was as close as possible to our ideas, so that the teams that followed could have all the ideas we wanted to convey. My tasks included writing playtests, coordinating a team and rigorously monitoring bug tracking.",
-        "summary-oob": "A fast-paced FPS developed using Unreal Engine. Focus on weapon feel, multiplayer weapon balancing, and technical testing to optimise performance and gameplay.",
+        "summary-stage": "Within the publishing house, I carried out numerous playtests in order to create a prototype that was as close as possible to our ideas for future teams.",
+        "summary-oob": "A fast-paced FPS developed using Unreal Engine. Focus on weapon feel, multiplayer weapon balancing, and technical testing to optimise gameplay.",
         "summary-arcadia": "An ambitious RPG project where I designed the progression systems and skill trees, while working on gameplay consistency.",
 
         "cv-title": "Curriculum Vitae.",
@@ -155,7 +155,7 @@ const translations = {
 
 // Fonction pour (ré)initialiser l'animation presentation
 function initpresentation() {
-    const presentationContainer = document.querySelector("#presentation .text-reveal");
+    const presentationContainer = document.querySelector("#curriculum .text-reveal");
     if(!presentationContainer) return;
     const text = presentationContainer.innerText;
     presentationContainer.innerHTML = "";
@@ -164,9 +164,9 @@ function initpresentation() {
         span.innerHTML = word + " ";
         presentationContainer.appendChild(span);
     });
-    gsap.to("#presentation .text-reveal span", {
+    gsap.to("#curriculum .text-reveal span", {
         scrollTrigger: {
-            trigger: "#presentation", start: "top 80%", end: "bottom 20%", scrub: 1
+            trigger: "#curriculum", start: "top 80%", end: "bottom 20%", scrub: 1
         },
         opacity: 1, color: "#ffffff", stagger: 0.1
     });
@@ -425,7 +425,7 @@ to remain competitive even when relying solely on the pistol.
             title: "Stage Myria Éditions",
             tags: ["Stage", "Lead", "Jeu Vidéo", "Level Design"],
             desc: `
-      <p>Lors de mon stage chez <strong>Myria Éditions</strong>, j’ai eu l’opportunité d’occuper le rôle de <strong>Lead</strong>. 
+      <p>Lors de mon stage chez <strong>Myria Éditions</strong>, j’ai eu l’opportunité d’occuper le rôle de <strong>Producing</strong>. 
       J’étais responsable de la coordination d’une petite équipe de testeurs, de la communication entre les pôles, 
       et du suivi de l’avancement des tâches pour garantir la qualité du jeu en développement ainsi que de <strong>fournir un prototype</strong> le plus complet possible afin de <strong>transmettre les idées à intentions aux équipes futures.</strong> </p>
 
@@ -481,7 +481,7 @@ to remain competitive even when relying solely on the pistol.
             title: "Internship at Myria Éditions",
             tags: ["Internship", "Lead", "Video Game", "Level Design"],
             desc: `
-      <p>During my internship at <strong>Myria Éditions</strong>, I had the opportunity to work as a <strong>Lead</strong>. 
+      <p>During my internship at <strong>Myria Éditions</strong>, I had the opportunity to work as a <strong>Producing</strong>. 
       I was responsible for coordinating a small testing team, managing communication between departments, 
       and monitoring task progress to ensure the quality of the game under development, as well as <strong>providing a prototype</strong> that is as complete as possible in order to <strong>convey ideas and intentions to future teams.</strong> </p>
 
@@ -577,9 +577,9 @@ Grâce à une approche rigoureuse, une bonne compréhension des systèmes de jeu
 
 <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
   <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" 
-     style="pointer-events: auto; background: #fff; color: #000;">📥 CV Français</a>
+     style="pointer-events: auto;">📥 CV Français</a>
   <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" 
-     style="pointer-events: auto; background: #fff; color: #000;">📥 CV Anglais</a>
+     style="pointer-events: auto;">📥 CV Anglais</a>
 </div>
 `,
         },
@@ -624,9 +624,9 @@ Thanks to a rigorous approach, a good understanding of game systems, and strong 
 
 <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
   <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" 
-     style="pointer-events: auto; background: #fff; color: #000;">📥 French CV</a>
+     style="pointer-events: auto;">📥 French CV</a>
   <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" 
-     style="pointer-events: auto; background: #fff; color: #000;">📥 English CV</a>
+     style="pointer-events: auto;">📥 English CV</a>
 </div>
 `,
         }
@@ -639,13 +639,13 @@ Thanks to a rigorous approach, a good understanding of game systems, and strong 
             tags: ["Game Design", "QA Testing", "Open to Work"],
             desc: `<p>Game Designer & QA Tester passionné, je suis disponible pour de nouvelles opportunités.</p>
                    <div style="margin: 20px 0; font-size: 1.1rem;">
-                        <p>📧 <strong>Email :</strong> <a href="mailto:coco49.cm11@gmail.com" style="color:#fff;">coco49.cm11@gmail.com</a></p>
+                        <p>📧 <strong>Email :</strong> <a href="mailto:corentinzandomenighi@gmail.com" style="color:#fff;">corentinzandomenighi@gmail.com</a></p>
                         <p>📱 <strong>Téléphone :</strong> +33 7 85 97 83 83</p>
                         <p style="margin-top: 10px;">🔗 <strong>Mes réseaux :</strong> <a href="https://www.linkedin.com/in/corentin-zandomenighi-a773842a2/" target="_blank" style="color:#fff; text-decoration: underline;">LinkedIn</a> / <a href="https://www.therookies.co/u/CXKILLXR" target="_blank" style="color:#fff; text-decoration: underline;">The Rookies</a></p>
                    </div>
                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-                       <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 CV Français</a>
-                       <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 CV Anglais</a>
+                       <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; color: #fff;">📥 CV Français</a>
+                       <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; color: #fff;">📥 CV Anglais</a>
                    </div>`
         },
         en: {
@@ -653,31 +653,23 @@ Thanks to a rigorous approach, a good understanding of game systems, and strong 
             tags: ["Game Design", "QA Testing", "Open to Work"],
             desc: `<p>Passionate Game Designer & QA Tester, I am available for new opportunities.</p>
                    <div style="margin: 20px 0; font-size: 1.1rem;">
-                        <p>📧 <strong>Email:</strong> <a href="mailto:coco49.cm11@gmail.com" style="color:#fff;">coco49.cm11@gmail.com</a></p>
+                        <p>📧 <strong>Email:</strong> <a href="mailto:corentinzandomenighi@gmail.com" style="color:#fff;">corentinzandomenighi@gmail.com</a></p>
                         <p>📱 <strong>Phone:</strong> +33 7 85 97 83 83</p>
                         <p style="margin-top: 10px;">🔗 <strong>My Networks:</strong> <a href="https://www.linkedin.com/in/corentin-zandomenighi-a773842a2/" target="_blank" style="color:#fff; text-decoration: underline;">LinkedIn</a> / <a href="https://www.therookies.co/u/CXKILLXR" target="_blank" style="color:#fff; text-decoration: underline;">The Rookies</a></p>
                    </div>
                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-                       <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 Resume French</a>
-                       <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; background: #fff; color: #000;">📥 Resume English</a>
+                       <a href="./cvfr/CV_Zandomenighi_Corentin_FR.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; color: #fff;">📥 Resume French</a>
+                       <a href="./cven/CV_Zandomenighi_Corentin_EN.pdf" target="_blank" class="btn-fake" style="pointer-events: auto; color: #fff;">📥 Resume English</a>
                    </div>`
         }
     }
 };
 
-// --- LENIS SCROLL ---
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true
-});
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
+// --- SCROLL & GSAP ---
+const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
 
-// --- GSAP ANIMATIONS ---
 gsap.registerPlugin(ScrollTrigger);
 
 // Loader
@@ -685,49 +677,14 @@ const loaderTimeline = gsap.timeline();
 loaderTimeline
     .to(".loader-bar", { width: "100%", duration: 1.5, ease: "power2.inOut" })
     .to(".loader", { y: "-100%", duration: 0.8, ease: "power4.inOut" })
-    .to(".hero-title", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.4")
-    .to("#hero-sub", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.8")
-    .to("#scroll-hint", { opacity: 1, duration: 1 }, "-=0.5");
+    .to(".hero-title, #hero-sub, #scroll-hint", { opacity: 1, y: 0, duration: 1, stagger: 0.2 });
 
-// Initialisation presentation
-initpresentation();
-
-// Bento Cards
+// Bento Cards Animation
 gsap.utils.toArray(".bento-card").forEach((card, i) => {
     gsap.from(card, {
         scrollTrigger: { trigger: card, start: "top 90%" },
         y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: i * 0.1
     });
-});
-
-const projectCards = gsap.utils.toArray('.card-container');
-
-projectCards.forEach((container, i) => {
-    if (i < projectCards.length - 1) {
-        const card = container.querySelector('.card');
-
-        gsap.to(card, {
-            yPercent: 110,
-            opacity: 0,
-            ease: "none",
-            scrollTrigger: {
-                trigger: container,
-                start: "top top",
-                end: "+=100%",
-                scrub: true,
-                pin: true,
-                pinSpacing: false,
-                onUpdate: (self) => {
-                    // Si la carte est descendue à plus de 90%, on libère les clics
-                    if (self.progress > 0.9) {
-                        container.classList.add('pass-through');
-                    } else {
-                        container.classList.remove('pass-through');
-                    }
-                }
-            }
-        });
-    }
 });
 
 // --- MODAL LOGIC ---
@@ -736,8 +693,6 @@ const modal = document.querySelector(".project-modal");
 function openProject(id) {
     const project = projectData[id];
     if(!project) return;
-
-    // SÉLECTIONNER LES DONNÉES SELON LA LANGUE ACTUELLE (currentLang)
     const data = project[currentLang];
 
     document.getElementById('modal-title').innerText = data.title;
@@ -755,96 +710,35 @@ function openProject(id) {
 
     lenis.stop();
     modal.style.display = 'block';
-    gsap.fromTo(modal,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }
-    );
+    gsap.fromTo(modal, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5 });
 }
 
 function closeProject() {
-    gsap.to(modal, {
-        opacity: 0, y: 50, duration: 0.4, ease: "power3.in",
-        onComplete: () => {
-            modal.style.display = 'none';
-            lenis.start();
-        }
-    });
+    gsap.to(modal, { opacity: 0, y: 50, duration: 0.4, onComplete: () => { modal.style.display = 'none'; lenis.start(); } });
 }
 
-// --- CURSOR LOGIC ---
+// --- CURSOR ---
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
 
 window.addEventListener("mousemove", (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-    cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+    cursorDot.style.left = `${e.clientX}px`;
+    cursorDot.style.top = `${e.clientY}px`;
+    cursorOutline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
 });
 
-const links = document.querySelectorAll("a, .bento-card, .menu-btn, .card, .close-btn, .header-btn, .lang-btn");
-links.forEach(link => {
-    link.addEventListener("mouseenter", () => {
-        cursorOutline.style.width = "80px";
-        cursorOutline.style.height = "80px";
-        cursorOutline.style.background = "rgba(255,255,255,0.1)";
-    });
-    link.addEventListener("mouseleave", () => {
-        cursorOutline.style.width = "40px";
-        cursorOutline.style.height = "40px";
-        cursorOutline.style.background = "transparent";
-    });
-});
+// --- ZOOM & EVENTS ---
+modal.addEventListener("click", (e) => { if (e.target === modal) closeProject(); });
+window.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.style.display === "block") closeProject(); });
 
-// --- AMÉLIORATIONS DE FERMETURE DES MODALES ---
-
-// 1. Fermer en cliquant sur les côtés (à l'extérieur du contenu)
-modal.addEventListener("click", (e) => {
-    // Si l'élément cliqué est la modale elle-même (le fond) et non son contenu enfant
-    if (e.target === modal) {
-        closeProject();
-    }
-});
-
-// 2. Fermer avec la touche Échap (Escape)
-window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        // On vérifie si la modale est actuellement affichée
-        if (modal.style.display === "block") {
-            closeProject();
-        }
-    }
-});
-
-// --- Zoom intégré (local) dans la modale ---
-// ✅ Désactive totalement le zoom sur mobile
-const isTouchDevice =
-    window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
-
-if (!isTouchDevice) {
-    // On attend que tout le DOM soit prêt
-    window.addEventListener('DOMContentLoaded', () => {
-        // Ajoute le listener sur TOUTES les images dans les modales
-        document.addEventListener('click', function (e) {
-            const img = e.target.closest('.project-modal img');
-            if (!img) return;
-
-            // Si déjà zoomée → retour à la taille normale
-            if (img.classList.contains('zoomed')) {
-                img.classList.remove('zoomed');
-                return;
-            }
-
-            // Sinon → on applique le zoom local
-            img.classList.add('zoomed');
-        });
+if (!(window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window)) {
+    document.addEventListener('click', (e) => {
+        const img = e.target.closest('.project-modal img');
+        if (img) img.classList.toggle('zoomed');
     });
 }
-// ===== INITIALISATION DE LA LANGUE AU CHARGEMENT =====
-window.addEventListener("DOMContentLoaded", () => {
-    setLanguage(currentLang); // currentLang = 'fr'
-});
+
+window.addEventListener("DOMContentLoaded", () => { setLanguage(currentLang); });
 
 
 

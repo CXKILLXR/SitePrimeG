@@ -67,11 +67,10 @@
 
 <section id="curriculum">
 
-    <h2 class="section-header" data-translate="cv-title">Curriculum Vitae.</h2>
+    <h2 class="section-header" data-translate="cv-title" style="padding-left: 12vw;">Curriculum Vitae.</h2>
 
     <div class="cv-big-card">
 
-        <!-- COLONNE GAUCHE -->
         <div class="cv-left">
             <h3 data-translate="cv-presentation-title">Présentation</h3>
 
@@ -80,7 +79,6 @@
             <p data-translate="cv-presentation-p3"></p>
         </div>
 
-        <!-- COLONNE DROITE -->
         <div class="cv-right">
 
             <div class="cv-block">
@@ -118,60 +116,53 @@
 </section>
 
 
+<div class="project-wrap">
+    <h2 class="section-header" data-translate="section-projects" style="padding-left: 0vw;">Projets.</h2>
+
+    <div id="projects">
+        <div class="card-container">
+            <div class="card" onclick="openProject('stage')" data-id="stage">
+                <div class="card-visual" style="background-image: url('./img/Myria logo.png');"></div>
+                <div class="card-info">
+                    <div class="card-tag" data-translate="bloc-title-p1">Projet 1</div>
+                    <h3 class="bento-title">Stage Myria Editions</h3>
+                    <p class="project-summary" data-translate="summary-stage">
+                        Au sein de la maison d'édition, j'ai structuré les processus de Quality Assurance.
+                    </p>
+                    <br><span class="btn-fake" data-translate="btn-view">Voir l'étude</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card" onclick="openProject('outofbound')" data-id="outofbound">
+                <div class="card-visual" style="background-image: url('./img/OOB logo.png');"></div>
+                <div class="card-info">
+                    <div class="card-tag" data-translate="bloc-title-p2">Projet 2</div>
+                    <h3 class="bento-title">Out of Bounds</h3>
+                    <p class="project-summary" data-translate="summary-oob">
+                        Un FPS nerveux développé sous Unreal Engine. Focus sur le "feel" des armes et l'équilibrage.
+                    </p>
+                    <br><span class="btn-fake" data-translate="btn-view">Voir l'étude</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card" onclick="openProject('arcadia')" data-id="arcadia">
+                <div class="card-visual" id="arcadia"></div>
+                <div class="card-info">
+                    <div class="card-tag" data-translate="bloc-title-p3">Projet 3</div>
+                    <h3 class="bento-title">Arcadia Unbound</h3>
+                    <p class="project-summary" data-translate="summary-arcadia">
+                        Conception des systèmes de progression et des arbres de compétences.
+                    </p>
+                    <br><span class="btn-fake" data-translate="btn-view">Voir l'étude</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="project-wrap" id="projects">
-    <section style="padding-bottom: 50px;">
-        <h2 class="section-header" data-translate="section-projects">Projets.</h2>
-    </section>
-
-    <!-- 1️⃣ STAGE -->
-    <div class="card-container">
-        <div class="card" onclick="openProject('stage')" data-id="stage">
-            <div class="card-visual" style="background-image: url('./img/Myria logo.png'); background-size: cover; background-position: center;"></div>
-            <div class="card-info">
-                <div class="card-tag" data-translate="bloc-title-p1">Projet 1</div>
-                <h3 class="bento-title" style="font-size: 2.5rem;">Stage Myria Editions</h3>
-                <p class="project-summary" data-translate="summary-stage">
-                    Au sein de la maison d'édition, j'ai structuré les processus de Quality Assurance.
-                    Mes missions incluaient la rédaction de plans de tests complets, la coordination d'une petite équipe de testeurs et le suivi rigoureux du bug tracking pour garantir la stabilité du produit final.
-                </p>
-                <span class="btn-fake" data-translate="btn-view">Voir l'étude</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2️⃣ OUT OF BOUNDS -->
-    <div class="card-container">
-        <div class="card" onclick="openProject('outofbound')" data-id="outofbound">
-            <div class="card-visual" style="background-image: url('./img/OOB logo.png'); background-size: cover; background-position: center;"></div>
-            <div class="card-info">
-                <div class="card-tag" data-translate="bloc-title-p2">Projet 2</div>
-                <h3 class="bento-title" style="font-size: 2.5rem;">Out of Bounds</h3>
-                <p class="project-summary" data-translate="summary-oob">
-                    Un FPS nerveux développé sous Unreal Engine. Je me suis concentré sur le "feel" des armes (Recoil, Feedback), l'équilibrage des classes en multijoueur et la réalisation de tests techniques poussés pour optimiser les performances réseau et le gameplay.
-                </p>
-                <span class="btn-fake" data-translate="btn-view">Voir l'étude</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 3️⃣ ARCADIA -->
-    <div class="card-container">
-        <div class="card" onclick="openProject('arcadia')" data-id="arcadia">
-            <div class="card-visual" id="arcadia"></div>
-            <div class="card-info">
-                <div class="card-tag" data-translate="bloc-title-p3">Projet 3</div>
-                <h3 class="bento-title" style="font-size: 2.5rem;">Arcadia Unbound</h3>
-                <p class="project-summary" data-translate="summary-arcadia">
-                    Un projet de RPG ambitieux où j'ai conçu les systèmes de progression des personnages et les arbres de compétences. J'ai également travaillé sur la cohérence de l'univers (Lore) et l'intégration des mécaniques narratives au sein du gameplay.
-                </p>
-                <span class="btn-fake" data-translate="btn-view">Voir l'étude</span>
-            </div>
-        </div>
-    </div>
-
-</div> <!-- ✅ project-wrap SE FERME ICI -->
 
 
 <footer id="contact">
