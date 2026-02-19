@@ -34,8 +34,8 @@
     </div>
 
     <div class="nav-wrapper">
-        <a href="#projects" class="header-btn" data-translate="nav-projects">Projets</a>
         <a href="#curriculum" class="header-btn" data-translate="nav-curriculum">Présentation</a>
+        <a href="#projects" class="header-btn" data-translate="nav-projects">Projets</a>
         <a href="javascript:void(0);" onclick="openProject('contact')" class="header-btn" data-translate="nav-contact">Contact</a>
     </div>
 </nav>
@@ -55,7 +55,7 @@
 </div>
 
 <section class="full-screen" id="hero">
-    <h1 class="hero-title">Corentin.</h1>
+    <h1 class="hero-title">Corentin</h1>
     <p class="text-reveal" style="margin-top: 30px; font-size: 1.5rem; opacity: 0; transform: translateY(20px);" id="hero-sub" data-translate="hero-sub">
         Game Designer & QA Tester
     </p>
@@ -67,7 +67,7 @@
 
 <section id="curriculum">
 
-    <h2 class="section-header" data-translate="cv-title" style="padding-left: 12vw;">Curriculum Vitae.</h2>
+    <h2 class="section-header" data-translate="cv-title" style="padding-left: 12vw;">Curriculum Vitae</h2>
 
     <div class="cv-big-card">
 
@@ -116,15 +116,23 @@
 </section>
 
 
-<div class="project-wrap">
-    <h2 class="section-header" data-translate="section-projects" style="padding-left: 0vw;">Projets.</h2>
+<div class="project-wrap" id="projects"> <div class="project-header-container">
+    <h2 class="section-header" data-translate="section-projects" style="margin-bottom: 0;">Projets.</h2>
 
-    <div id="projects">
-        <div class="card-container">
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="Stage">Stage</button>
+        <button class="filter-btn" data-filter="Concept">Concept</button>
+        <button class="filter-btn" data-filter="QA">QA</button>
+    </div>
+</div>
+
+    <div id="projects-grid">
+        <div class="card-container" data-category="Stage">
             <div class="card" onclick="openProject('stage')" data-id="stage">
                 <div class="card-visual" style="background-image: url('./img/Myria logo.png');"></div>
                 <div class="card-info">
-                    <div class="card-tag" data-translate="bloc-title-p1">Projet 1</div>
+                    <div class="card-tag" data-translate="bloc-title-p1">Stage</div>
                     <h3 class="bento-title">Stage Myria Editions</h3>
                     <p class="project-summary" data-translate="summary-stage">
                         Au sein de la maison d'édition, j'ai structuré les processus de Quality Assurance.
@@ -134,11 +142,11 @@
             </div>
         </div>
 
-        <div class="card-container">
+        <div class="card-container" data-category="QA">
             <div class="card" onclick="openProject('outofbound')" data-id="outofbound">
                 <div class="card-visual" style="background-image: url('./img/OOB logo.png');"></div>
                 <div class="card-info">
-                    <div class="card-tag" data-translate="bloc-title-p2">Projet 2</div>
+                    <div class="card-tag" data-translate="bloc-title-p2">QA</div>
                     <h3 class="bento-title">Out of Bounds</h3>
                     <p class="project-summary" data-translate="summary-oob">
                         Un FPS nerveux développé sous Unreal Engine. Focus sur le "feel" des armes et l'équilibrage.
@@ -148,11 +156,11 @@
             </div>
         </div>
 
-        <div class="card-container">
+        <div class="card-container" data-category="Concept">
             <div class="card" onclick="openProject('arcadia')" data-id="arcadia">
                 <div class="card-visual" id="arcadia"></div>
                 <div class="card-info">
-                    <div class="card-tag" data-translate="bloc-title-p3">Projet 3</div>
+                    <div class="card-tag" data-translate="bloc-title-p3">Concept</div>
                     <h3 class="bento-title">Arcadia Unbound</h3>
                     <p class="project-summary" data-translate="summary-arcadia">
                         Conception des systèmes de progression et des arbres de compétences.

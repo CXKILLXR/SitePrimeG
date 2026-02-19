@@ -140,11 +140,13 @@ nav {
     margin: 0 auto;
 }
 
-#projects {
+/* On cible le nouvel ID pour la grille */
+#projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 projets par ligne */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 30px;
-    height: auto !important;
+    align-items: start;
 }
 
 .card-container {
@@ -332,4 +334,52 @@ a, button, .menu-btn, .header-btn, .nav-link { cursor: pointer; }
 @media (max-width: 1100px) {
     .cv-big-card { grid-template-columns: 1fr; padding: 50px 30px; }
     .cv-right { grid-template-columns: 1fr; }
+}
+
+/* Aligne le titre et les filtres sur la même ligne */
+.project-header-container {
+    display: flex;
+    align-items: baseline; /* Aligne le bas du texte */
+    gap: 30px;            /* Espace entre "Projets." et les boutons */
+    margin-bottom: 40px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0; /* On enlève la marge du bas ici */
+}
+
+/* On rend les boutons plus petits */
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 8px 18px;      /* Plus petit padding */
+    border-radius: 14px;    /* Arrondi plus fin */
+    font-size: 0.85rem;     /* Texte plus petit */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn.active {
+    background: var(--accent); /* Ton bleu */
+    border-color: var(--accent);
+    color: #fff;
+}
+
+#projects {
+    /* 150px correspond à la hauteur de ton menu + une marge de sécurité */
+    scroll-margin-top: 150px;
+}
+
+/* Ajustement pour mobile : on empile si l'écran est trop petit */
+@media (max-width: 768px) {
+    .project-header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
 }

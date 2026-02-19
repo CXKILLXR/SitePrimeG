@@ -8,20 +8,20 @@ const translations = {
         "nav-curriculum": "Présentation",
         "nav-contact": "Contact",
         "footer-ready": "Prêt pour le prochain niveau ?",
-        "footer-cta": "Échangeons.",
+        "footer-cta": "Échangeons",
         "footer-click": "(Cliquer pour me contacter)",
-        "section-projects": "Projets.",
+        "section-projects": "Projets",
         "scroll-hint": "Défiler pour explorer",
-        "btn-view": "Voir l'étude",
-        "bloc-title-p1": "Projet 1",
-        "bloc-title-p2": "Projet 2",
-        "bloc-title-p3": "Projet 3",
+        "btn-view": "Voir plus",
+        "bloc-title-p1": "Stage",
+        "bloc-title-p2": "QA",
+        "bloc-title-p3": "Concept",
         "summary-stage": "Au sein de la maison d'édition, j'ai réalisé nombreux playtest afin d'avoir un prototype le plus proche de nos idées pour que les équipes futur.",
         "summary-oob": "Un FPS nerveux développé sous Unreal Engine. Focus sur le feeling des armes, l'équilibrage des armes en multijoueur et la réalisation de tests techniques pour optimiser le gameplay.",
         "summary-arcadia": "Un projet de RPG ambitieux où j'ai conçu les systèmes de progression et les arbres de compétences, tout en travaillant sur la cohérence au gameplay.",
 
         /* ===== TITRE ===== */
-        "cv-title": "Curriculum Vitae.",
+        "cv-title": "Curriculum Vitae",
 
         /* ===== PRÉSENTATION ===== */
         "cv-presentation-title": "Présentation",
@@ -83,19 +83,19 @@ const translations = {
         "nav-curriculum": "Presentation",
         "nav-contact": "Contact",
         "footer-ready": "Ready for the next level ?",
-        "footer-cta": "Let's Talk.",
+        "footer-cta": "Let's Talk",
         "footer-click": "(Click to contact me)",
-        "section-projects": "Projects.",
+        "section-projects": "Projects",
         "scroll-hint": "Scroll to explore",
-        "btn-view": "See the study",
-        "bloc-title-p1": "Project 1",
-        "bloc-title-p2": "Project 2",
-        "bloc-title-p3": "Project 3",
+        "btn-view": "See more",
+        "bloc-title-p1": "Stage",
+        "bloc-title-p2": "QA",
+        "bloc-title-p3": "Stage",
         "summary-stage": "Within the publishing house, I carried out numerous playtests in order to create a prototype that was as close as possible to our ideas for future teams.",
         "summary-oob": "A fast-paced FPS developed using Unreal Engine. Focus on weapon feel, multiplayer weapon balancing, and technical testing to optimise gameplay.",
         "summary-arcadia": "An ambitious RPG project where I designed the progression systems and skill trees, while working on gameplay consistency.",
 
-        "cv-title": "Curriculum Vitae.",
+        "cv-title": "Curriculum Vitae",
 
         /* ===== PRÉSENTATION ===== */
         "cv-presentation-title": "Presentation",
@@ -738,12 +738,51 @@ if (!(window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window
     });
 }
 
+// --- SYSTÈME DE FILTRAGE DES PROJETS ---
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.card-container');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // État actif des boutons
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+            // On récupère la catégorie (attention à la casse Stage/stage)
+            const category = card.getAttribute('data-category');
+
+            if (filterValue === 'all' || category === filterValue) {
+                // On remet en display block AVANT d'animer l'opacité
+                card.style.display = 'block';
+                gsap.to(card, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.4,
+                    ease: "power2.out",
+                    overwrite: true // Évite les conflits d'animation
+                });
+            } else {
+                // On anime la sortie puis on met en display none
+                gsap.to(card, {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.3,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        // TRÈS IMPORTANT : On dit à ScrollTrigger que la hauteur de page a changé
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 400);
+    });
+});
+
 window.addEventListener("DOMContentLoaded", () => { setLanguage(currentLang); });
-
-
-
-
-
-
-
-
