@@ -426,7 +426,7 @@ to remain competitive even when relying solely on the pistol.
             tags: ["Stage", "Lead", "Jeu Vidéo", "Level Design"],
             desc: `
       <p>Lors de mon stage chez <strong>Myria Éditions</strong>, j’ai eu l’opportunité d’occuper le rôle de <strong>Producing</strong>. 
-      J’étais responsable de la coordination d’une petite équipe de testeurs, de la communication entre les pôles, 
+      J’étais responsable de la coordination d’une petite équipe, de la communication entre les pôles, 
       et du suivi de l’avancement des tâches pour garantir la qualité du jeu en développement ainsi que de <strong>fournir un prototype</strong> le plus complet possible afin de <strong>transmettre les idées à intentions aux équipes futures.</strong> </p>
 
       <h3 style="margin-top: 25px;">🎯 Rôles et missions</h3>
@@ -482,7 +482,7 @@ to remain competitive even when relying solely on the pistol.
             tags: ["Internship", "Lead", "Video Game", "Level Design"],
             desc: `
       <p>During my internship at <strong>Myria Éditions</strong>, I had the opportunity to work as a <strong>Producing</strong>. 
-      I was responsible for coordinating a small testing team, managing communication between departments, 
+      I was responsible for coordinating a small team, managing communication between departments, 
       and monitoring task progress to ensure the quality of the game under development, as well as <strong>providing a prototype</strong> that is as complete as possible in order to <strong>convey ideas and intentions to future teams.</strong> </p>
 
       <h3 style="margin-top: 25px;">🎯 Roles and Missions</h3>
@@ -548,7 +548,7 @@ Grâce à une approche rigoureuse, une bonne compréhension des systèmes de jeu
 <h4>💼 Expériences professionnelles</h4>
 <ul>
   <li><strong>Myria Editions</strong> — Stage Leader d’équipe QA (Juillet - Août 2025)  
-  Coordination d’une équipe de testeurs, identification de bugs critiques et mise en place de protocoles de test.</li>
+  Coordination d’une équipe, identification de bugs critiques et mise en place de protocoles de test.</li>
   <li><strong>Camping LVL Les Ayguades</strong> — Réceptionniste (Juin - Août 2024)  
   Travail en équipe dans un environnement dynamique et gestion des tâches quotidiennes.</li>
 </ul>
@@ -595,7 +595,7 @@ Thanks to a rigorous approach, a good understanding of game systems, and strong 
 <h4>💼 Professional Experience</h4>
 <ul>
   <li><strong>Myria Editions</strong> — QA Team Leader Intern (July - August 2025)  
-  Coordinated a team of testers, identified critical bugs, and implemented testing protocols to ensure project stability.</li>
+  Coordinated a team, identified critical bugs, and implemented testing protocols to ensure project stability.</li>
   <li><strong>Camping LVL Les Ayguades</strong> — Receptionist (June - August 2024)  
   Worked efficiently within a team environment, managing multiple daily tasks in a fast-paced setting.</li>
 </ul>
