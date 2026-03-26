@@ -36,8 +36,8 @@ const translations = {
         /* ===== EXPÉRIENCES ===== */
         "cv-experience-title": "💼 Expériences professionnelles",
         "cv-experience-list": `
-            <li><strong>Myria Éditions</strong> — Stage QA Lead (2025)</li>
-            <li>Coordination d’équipe QA</li>
+            <li><strong>Myria Éditions</strong> — Stage QA / Producing (2025)</li>
+            <li>Coordination d’équipe</li>
             <li>Plans de tests & bug tracking</li>
             <li><strong>Camping LVL Les Ayguades</strong> — Réceptionniste (2024)</li>
         `,
@@ -110,8 +110,8 @@ const translations = {
         /* ===== EXPERIENCE ===== */
         "cv-experience-title": "💼 Professional Experience",
         "cv-experience-list": `
-            <li><strong>Myria Éditions</strong> — QA Lead Intern (2025)</li>
-            <li>QA team coordination</li>
+            <li><strong>Myria Éditions</strong> — QA / Producing Intern (2025)</li>
+            <li>Team coordination</li>
             <li>Test plans & bug tracking</li>
             <li><strong>Camping LVL Les Ayguades</strong> — Receptionist (2024)</li>
         `,
